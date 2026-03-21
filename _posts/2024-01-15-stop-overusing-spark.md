@@ -163,5 +163,4 @@ BigQuery is not a silver bullet, but for GCP-hosted analytics and ELT it should 
 
 ---
 
-If you're building data platforms, exploring analytics, or just love thinking about how data actually tells a story, feel free to follow or leave a clap 👏. It's a small signal, but it helps me keep writing honest, example-driven content about data modeling, fact tables, dimensions, and the patterns that make analytics work.
-Thanks for reading and for keeping curiosity alive ❤️.
+If you're building data platforms, exploring analytics, or just love thinking about how data actually tells a story, feel free to follow me on linkedin. 
