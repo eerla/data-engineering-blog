@@ -5,6 +5,9 @@ baseurl: "/data-engineering-blog"
 url: "https://eerla.github.io"
 author: "Guru"
 
+# Permalinks
+permalink: pretty
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -21,7 +24,7 @@ paginate_path: "/blog/page:num/"
 collections:
   posts:
     output: true
-    permalink: /:categories/:year/:month/:day/:title/
+    permalink: /:categories/:year/:month/:day/:title.html
 
 # Defaults
 defaults:
