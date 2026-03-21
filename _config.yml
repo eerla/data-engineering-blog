@@ -1,7 +1,7 @@
 # Site settings
 title: "Guru | Data Engineering"
 description: "Lead Engineer building real-world data systems. Strong opinions on data engineering, system design, and practical solutions."
-baseurl: ""
+baseurl: "/data-engineering-blog"
 url: "https://eerla.github.io"
 author: "Guru"
 

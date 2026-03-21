@@ -56,7 +56,8 @@ A clean, fast, opinionated personal website using GitHub Pages and Jekyll that a
 
 2. **Update configuration**
    - Edit `_config.yml` with your details
-   - Update `url` and `baseurl` if needed
+   - `baseurl` is already set to "/data-engineering-blog" for project repository
+   - Update `url` if needed
 
 3. **Add your content**
    - Replace placeholder content in `_posts/` with your Medium articles
@@ -74,6 +75,7 @@ A clean, fast, opinionated personal website using GitHub Pages and Jekyll that a
    - Scroll to "GitHub Pages"
    - Select "Deploy from a branch" → "main" → "/ (root)"
    - Save and wait for deployment
+   - Your site will be available at: https://eerla.github.io/data-engineering-blog/
 
 ### Option 2: Local Development
 
