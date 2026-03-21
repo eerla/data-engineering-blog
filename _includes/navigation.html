@@ -1,0 +1,26 @@
+<nav class="navigation">
+    <div class="nav-container">
+        <div class="nav-brand">
+            <a href="{{ '/' | relative_url }}" class="brand-link">
+                {{ site.title | split: "|" | first }}
+            </a>
+        </div>
+        
+        <ul class="nav-menu">
+            {% for nav_item in site.navigation %}
+                <li class="nav-item">
+                    <a href="{{ nav_item.url | relative_url }}" 
+                       class="nav-link {% if page.url == nav_item.url %}active{% endif %}">
+                        {{ nav_item.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>

@@ -1,0 +1,92 @@
+# Site settings
+title: "Guru | Data Engineering"
+description: "Lead Engineer building real-world data systems. Strong opinions on data engineering, system design, and practical solutions."
+baseurl: ""
+url: "https://eerla.github.io"
+author: "Guru"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:categories/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      categories: "data-engineering"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# SEO
+twitter:
+  username: think-data
+  card: summary
+
+social:
+  name: Guru
+  links:
+    - https://github.com/eerla
+    - https://medium.com/@think-data
+    - https://www.linkedin.com/in/guru-e/
+
+# Google Analytics (add your tracking ID)
+google_analytics: 
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# Include
+include:
+  - _pages
+
+# Markdown processing
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+# Site navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Series"
+    url: "/series/"
+  - title: "Projects"
+    url: "/projects/"
+  - title: "About"
+    url: "/about/"
