@@ -89,6 +89,12 @@ kramdown:
 navigation:
   - title: "Home"
     url: ""
+  - title: "Roadmap"
+    url: "/roadmap/"
+  - title: "Layers"
+    url: "/layers/"
+  - title: "Tools"
+    url: "/tools/"
   - title: "Blog"
     url: "/blog/"
   - title: "Series"

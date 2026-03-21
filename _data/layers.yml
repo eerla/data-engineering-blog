@@ -1,0 +1,85 @@
+# Data Engineering Layers
+
+- id: data_sources
+  name: Data Sources
+  description: Where data originates and how to access it
+  analogy: The starting point of your data journey - like different rivers flowing into a lake
+  depends_on: null
+  next: data_ingestion
+  problems_solved:
+    - Data accessibility and connectivity
+    - API integration challenges
+    - Data format standardization
+  types:
+    - Databases (SQL, NoSQL)
+    - APIs (REST, GraphQL)
+    - File systems (CSV, JSON, Parquet)
+    - Streaming sources (Kafka, Kinesis)
+
+- id: data_ingestion
+  name: Data Ingestion
+  description: Moving data from sources to storage systems
+  analogy: The transportation network that moves goods from suppliers to warehouses
+  depends_on: data_sources
+  next: data_processing
+  problems_solved:
+    - Reliable data transfer
+    - Real-time vs batch processing
+    - Data quality and validation
+    - Error handling and retry logic
+  types:
+    - Batch processing (scheduled jobs)
+    - Stream processing (continuous flow)
+    - Change Data Capture (CDC)
+    - API-based ingestion
+
+- id: data_processing
+  name: Data Processing
+  description: Transforming raw data into valuable insights
+  analogy: The factory that refines raw materials into finished products
+  depends_on: data_ingestion
+  next: data_storage
+  problems_solved:
+    - Data transformation and enrichment
+    - Aggregation and summarization
+    - Business logic implementation
+    - Performance optimization
+  types:
+    - Batch processing (ETL/ELT)
+    - Stream processing (real-time)
+    - Machine learning pipelines
+    - Data validation and cleaning
+
+- id: data_storage
+  name: Data Storage
+  description: Storing processed data for analysis and consumption
+  analogy: The warehouse system that organizes finished products for distribution
+  depends_on: data_processing
+  next: data_consumption
+  problems_solved:
+    - Scalable data storage
+    - Fast query performance
+    - Data governance and security
+    - Cost optimization
+  types:
+    - Data warehouses (BigQuery, Snowflake)
+    - Data lakes (S3, GCS)
+    - Lakehouses (Iceberg, Delta)
+    - Databases (PostgreSQL, MongoDB)
+
+- id: data_consumption
+  name: Data Consumption
+  description: Making data accessible to users and applications
+  analogy: The retail store where customers can easily find and purchase products
+  depends_on: data_storage
+  next: null
+  problems_solved:
+    - Data visualization and reporting
+    - Real-time analytics
+    - Self-service data access
+    - Decision support systems
+  types:
+    - Business intelligence dashboards
+    - APIs and data services
+    - Notebooks and analysis tools
+    - Automated reporting systems

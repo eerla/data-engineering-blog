@@ -1,0 +1,173 @@
+# Data Engineering Tools Catalog
+
+# Ingestion Tools
+- name: Apache Airflow
+  layer: Data Ingestion
+  type: Batch
+  description: Workflow orchestration and scheduling platform for managing data pipelines
+  when_to_use: When you need scheduled, reliable data workflows with complex dependencies
+  category: Orchestration
+
+- name: Apache Kafka
+  layer: Data Ingestion
+  type: Streaming
+  description: Distributed event streaming platform for real-time data pipelines
+  when_to_use: When you need high-throughput, fault-tolerant real-time data streaming
+  category: Streaming
+
+- name: Apache NiFi
+  layer: Data Ingestion
+  type: Batch
+  description: Data flow automation system with visual pipeline design
+  when_to_use: When you need visual data pipeline design and automated data flows
+  category: ETL
+
+- name: AWS Kinesis
+  layer: Data Ingestion
+  type: Streaming
+  description: Cloud-native streaming service for real-time data processing
+  when_to_use: When you're in AWS ecosystem and need managed streaming
+  category: Cloud Service
+
+- name: Google Cloud Pub/Sub
+  layer: Data Ingestion
+  type: Streaming
+  description: Cloud-native messaging service for event-driven architectures
+  when_to_use: When you're in GCP and need reliable event streaming
+  category: Cloud Service
+
+- name: Fivetran
+  layer: Data Ingestion
+  type: Batch
+  description: Automated ELT platform with pre-built connectors
+  when_to_use: When you need fast integration with SaaS data sources
+  category: ELT Platform
+
+# Processing Tools
+- name: Apache Spark
+  layer: Data Processing
+  type: Batch
+  description: Distributed computing engine for large-scale data processing
+  when_to_use: When you have massive datasets and complex transformations
+  category: Distributed Computing
+
+- name: Apache Flink
+  layer: Data Processing
+  type: Streaming
+  description: Stream processing engine for real-time analytics
+  when_to_use: When you need true real-time processing with state
+  category: Stream Processing
+
+- name: dbt
+  layer: Data Processing
+  type: Batch
+  description: Data transformation tool that follows SQL-first methodology
+  when_to_use: When you want to transform data in your warehouse using SQL
+  category: Transformation
+
+- name: Apache Beam
+  layer: Data Processing
+  type: Hybrid
+  description: Unified model for batch and streaming data processing
+  when_to_use: When you need unified batch and streaming pipelines
+  category: Unified Processing
+
+- name: Pandas
+  layer: Data Processing
+  type: Batch
+  description: Python library for data manipulation and analysis
+  when_to_use: When working with small to medium datasets in Python
+  category: Python Library
+
+- name: Dask
+  layer: Data Processing
+  type: Batch
+  description: Parallel computing library that scales Pandas workflows
+  when_to_use: When Pandas becomes slow and you need parallel processing
+  category: Python Library
+
+# Storage Tools
+- name: Amazon S3
+  layer: Data Storage
+  type: Object Storage
+  description: Scalable object storage service for data lakes
+  when_to_use: When you need durable, scalable storage for any data type
+  category: Cloud Storage
+
+- name: Google Cloud Storage
+  layer: Data Storage
+  type: Object Storage
+  description: Unified object storage for data lake architecture
+  when_to_use: When you're in GCP ecosystem and need scalable storage
+  category: Cloud Storage
+
+- name: Azure Data Lake Storage
+  layer: Data Storage
+  type: Object Storage
+  description: Enterprise-grade data lake storage with security features
+  when_to_use: When you need Microsoft ecosystem integration
+  category: Cloud Storage
+
+- name: Apache Iceberg
+  layer: Data Storage
+  type: Table Format
+  description: Open table format for huge analytical datasets
+  when_to_use: When you need ACID transactions on data lake tables
+  category: Table Format
+
+- name: Delta Lake
+  layer: Data Storage
+  type: Table Format
+  description: ACID-compliant table format with time travel
+  when_to_use: When you need reliable transactions and versioning
+  category: Table Format
+
+- name: Apache Hudi
+  layer: Data Storage
+  type: Table Format
+  description: Data lake framework with incremental processing
+  when_to_use: When you need upserts and incremental processing
+  category: Table Format
+
+# Consumption Tools
+- name: Apache Superset
+  layer: Data Consumption
+  type: BI
+  description: Open-source business intelligence platform
+  when_to_use: When you need free, customizable BI with SQL interface
+  category: Business Intelligence
+
+- name: Tableau
+  layer: Data Consumption
+  type: BI
+  description: Visual analytics platform for enterprise reporting
+  when_to_use: When you need advanced visualizations and enterprise features
+  category: Business Intelligence
+
+- name: Looker
+  layer: Data Consumption
+  type: BI
+  description: Data platform with embedded analytics and modeling
+  when_to_use: When you need governed, collaborative BI experience
+  category: Business Intelligence
+
+- name: Power BI
+  layer: Data Consumption
+  type: BI
+  description: Microsoft's business analytics and visualization platform
+  when_to_use: When you're in Microsoft ecosystem and need enterprise BI
+  category: Business Intelligence
+
+- name: Grafana
+  layer: Data Consumption
+  type: Monitoring
+  description: Open-source observability platform for time-series data
+  when_to_use: When you need monitoring and alerting for operational data
+  category: Monitoring
+
+- name: Jupyter
+  layer: Data Consumption
+  type: Notebook
+  description: Interactive notebook environment for data analysis
+  when_to_use: When you need exploratory data analysis and visualization
+  category: Notebook

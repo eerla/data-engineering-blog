@@ -14,7 +14,7 @@ title: "Series"
     <p style="color: var(--text-light); margin-bottom: 2rem;">Common misconceptions that cost companies time and money.</p>
     <ul class="series-list">
       <li class="series-item">
-        <a href="{{ site.baseurl }}/blog/stop-overusing-spark/">Stop Overusing Spark: 80% of Workloads Don't Need It</a>
+        <a href="{{ site.baseurl }}/blog/stop-overusing-spark/">Spark on GCP is Overkill - Use BigQuery Instead</a>
       </li>
       <li class="series-item">
         <a href="{{ site.baseurl }}/blog/your-data-lake-is-probably-a-swamp/">Your Data Lake is Probably a Swamp</a>
