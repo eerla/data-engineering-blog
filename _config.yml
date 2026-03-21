@@ -1,9 +1,9 @@
 # Site settings
-title: "Guru | Data Engineering"
+title: "Guru, Eerla | Data Engineering"
 description: "Lead Engineer building real-world data systems. Strong opinions on data engineering, system design, and practical solutions."
 baseurl: "/data-engineering-blog"
 url: "https://eerla.github.io"
-author: "Guru"
+author: "Guru, Eerla"
 
 # Permalinks
 permalink: pretty
@@ -24,7 +24,7 @@ paginate_path: "/blog/page:num/"
 collections:
   posts:
     output: true
-    permalink: /:categories/:year/:month/:day/:title.html
+    permalink: /blog/:title/
 
 # Defaults
 defaults:
