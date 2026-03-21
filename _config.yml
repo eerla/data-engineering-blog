@@ -8,7 +8,6 @@ author: "Guru"
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -35,6 +34,10 @@ defaults:
   - scope:
       path: ""
       type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
     values:
       layout: "default"
 
@@ -68,6 +71,7 @@ exclude:
 
 # Include
 include:
+  - .htaccess
   - _pages
 
 # Markdown processing
@@ -81,7 +85,7 @@ kramdown:
 # Site navigation
 navigation:
   - title: "Home"
-    url: "/"
+    url: ""
   - title: "Blog"
     url: "/blog/"
   - title: "Series"
