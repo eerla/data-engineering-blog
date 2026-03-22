@@ -93,6 +93,8 @@ navigation:
     url: "/roadmap/"
   - title: "Layers"
     url: "/layers/"
+  - title: "Cloud Tools"
+    url: "/cloud-tools/"
   - title: "Tools"
     url: "/tools/"
   - title: "Blog"
