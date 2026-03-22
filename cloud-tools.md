@@ -121,76 +121,940 @@ title: "Cloud Data Engineering Tools"
   </section>
 
   <section class="gcp-section">
-    <h2 class="cloud-title">🔵 Google Cloud Platform (GCP)</h2>
-    <p class="cloud-description">Serverless-first cloud platform with strong analytics and ML integration</p>
+    <h2 class="cloud-title">☁️ Google Cloud Platform (GCP)</h2>
+    <p class="cloud-description">Comprehensive cloud platform with serverless-first approach and strong ML integration</p>
     
     <div class="tool-categories">
       <div class="category-section">
-        <h3>Storage & Analytics</h3>
-        <div class="cloud-tools">
-          <div class="cloud-tool">
-            <h4><a href="{{ site.baseurl }}/tools/#google-cloud-storage">Google Cloud Storage</a></h4>
-            <p>Unified object storage providing scalable and cost-effective data storage</p>
-            <div class="tool-details">
-              <span class="cloud-badge">GCP Native</span>
-              <span class="type-badge">Data Lake</span>
+        <h3>1️⃣ Ingestion (Batch + Streaming)</h3>
+        <div class="sub-category">
+          <h4>Batch Ingestion</h4>
+          <div class="cloud-tools">
+            <div class="cloud-tool">
+              <h4>Cloud Storage Transfer Service</h4>
+              <p>Move data from AWS/S3, HTTP, on-prem to GCP with automated scheduling</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Batch Transfer</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Migrating data from other clouds, scheduled batch transfers, on-prem to cloud migration
+              </div>
             </div>
-            <div class="when-to-use">
-              <strong>When to use:</strong> Data lake implementation, analytics storage, application data backup in GCP
+            
+            <div class="cloud-tool">
+              <h4>Storage Transfer Service for On-Prem</h4>
+              <p>Agent-based ingestion for on-premises data sources to Cloud Storage</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">On-Prem Transfer</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Large on-prem data migration, continuous sync from on-prem to cloud
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Cloud Data Fusion</h4>
+              <p>Low-code ETL platform with 200+ pre-built connectors for data integration</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">ETL Platform</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Rapid ETL development, connecting SaaS applications, visual data pipeline building
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Cloud Functions</h4>
+              <p>Event-driven serverless functions for lightweight data ingestion and processing</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Serverless</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Event-driven data ingestion, API-based data collection, lightweight transformations
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Cloud Run</h4>
+              <p>Containerized ingestion microservices with automatic scaling and load balancing</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Container Platform</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Custom ingestion services, container-based data processing, HTTP-based data collection
+              </div>
             </div>
           </div>
           
-          <div class="cloud-tool">
-            <h4><a href="{{ site.baseurl }}/tools/#google-bigquery">Google BigQuery</a></h4>
-            <p>Serverless data warehouse with built-in machine learning and geospatial analytics</p>
-            <div class="tool-details">
-              <span class="cloud-badge">GCP Native</span>
-              <span class="type-badge">Data Warehouse</span>
-            </div>
-            <div class="when-to-use">
-              <strong>When to use:</strong> Large-scale analytics, real-time dashboards, cost-effective data warehousing
-            </div>
-          </div>
-          
-          <div class="cloud-tool">
-            <h4><a href="{{ site.baseurl }}/tools/#google-pub-sub">Google Pub/Sub</a></h4>
-            <p>Scalable messaging and event ingestion service for building event-driven systems</p>
-            <div class="tool-details">
-              <span class="cloud-badge">GCP Native</span>
-              <span class="type-badge">Streaming</span>
-            </div>
-            <div class="when-to-use">
-              <strong>When to use:</strong> Microservices communication, real-time event processing, cloud architecture integration
+          <div class="sub-category">
+            <h4>Streaming Ingestion</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#google-pub-sub">Pub/Sub</a></h4>
+                <p>Fully managed event ingestion service with at-least-once delivery guarantees</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Streaming</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Real-time event streaming, microservices communication, event-driven architectures
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Pub/Sub Lite</h4>
+                <p>Cheaper Kafka-like alternative for high-throughput event streaming</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Streaming</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Cost-effective event streaming, Kafka workloads, high-throughput messaging
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      <div class="category-section">
-        <h3>Processing & Streaming</h3>
-        <div class="cloud-tools">
-          <div class="cloud-tool">
-            <h4><a href="{{ site.baseurl }}/tools/#google-dataflow">Google Dataflow</a></h4>
-            <p>Managed stream and batch data processing service for large-scale analytics</p>
-            <div class="tool-details">
-              <span class="cloud-badge">GCP Native</span>
-              <span class="type-badge">Stream Processing</span>
+        
+        <div class="category-section">
+          <h3>2️⃣ CDC & Database Migration</h3>
+          <div class="cloud-tools">
+            <div class="cloud-tool">
+              <h4>Database Migration Service (DMS)</h4>
+              <p>Managed service for MySQL/Postgres/SQL Server → Cloud SQL/BigQuery migration</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Database Migration</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Database migration, ongoing replication, lift-and-shift projects
+              </div>
             </div>
-            <div class="when-to-use">
-              <strong>When to use:</strong> Real-time analytics, event processing, large-scale data transformations
+            
+            <div class="cloud-tool">
+              <h4>Datastream</h4>
+              <p>CDC service for MySQL/Postgres/Oracle → BigQuery with schema evolution</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">CDC</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Real-time database replication, change data capture, streaming database updates
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>3️⃣ Storage (Lake + Warehouse)</h3>
+          <div class="sub-category">
+            <h4>Object Storage (Data Lake)</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#google-cloud-storage">Cloud Storage (GCS)</a></h4>
+                <p>Unified object storage for raw, bronze, silver, and gold data layers</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Data Lake</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Data lake implementation, medallion architecture, cost-effective storage
+                </div>
+              </div>
             </div>
           </div>
           
-          <div class="cloud-tool">
-            <h4><a href="{{ site.baseurl }}/tools/#dataproc">Google Dataproc</a></h4>
-            <p>Managed Spark and Hadoop service for big data processing workloads</p>
-            <div class="tool-details">
-              <span class="cloud-badge">GCP Native</span>
-              <span class="type-badge">Distributed Computing</span>
+          <div class="sub-category">
+            <h4>Data Warehouse</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#google-bigquery">BigQuery</a></h4>
+                <p>Serverless warehouse with lakehouse engine, ML, and geospatial analytics</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Data Warehouse</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Large-scale analytics, real-time dashboards, cost-effective warehousing
+                </div>
+              </div>
             </div>
-            <div class="when-to-use">
-              <strong>When to use:</strong> Big data analytics, machine learning pipelines, distributed data processing
+          </div>
+          
+          <div class="sub-category">
+            <h4>Lakehouse Table Formats</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4>BigLake Tables</h4>
+                <p>Native BigQuery support for lakehouse table formats with ACID transactions</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Table Format</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Lakehouse architecture, ACID transactions on data lake, schema evolution
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Iceberg Support</h4>
+                <p>Apache Iceberg table format support via BigLake connectors</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Table Format</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Large analytic tables, time travel queries, schema evolution
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Delta Lake Support</h4>
+                <p>Read/write Delta Lake tables via BigLake connectors</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Table Format</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Delta Lake workloads, ACID transactions, merge operations
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>4️⃣ Processing (Batch + Streaming)</h3>
+          <div class="sub-category">
+            <h4>Batch Processing</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#google-bigquery">BigQuery SQL</a></h4>
+                <p>Serverless SQL engine for large-scale data transformations and analytics</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">SQL Processing</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Large-scale transformations, analytical queries, ELT workflows
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#dataproc">Dataproc</a></h4>
+                <p>Managed Hadoop/Spark cluster for big data processing workloads</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Distributed Computing</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Big data analytics, machine learning pipelines, distributed processing
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#google-dataflow">Dataflow</a></h4>
+                <p>Managed Apache Beam service for batch and stream processing</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Stream Processing</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Real-time analytics, event processing, large-scale data transformations
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Cloud Composer-Triggered Jobs</h4>
+                <p>Orchestrate batch processing jobs with Airflow workflows</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Orchestration</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Complex workflow orchestration, scheduled batch jobs, dependency management
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Cloud Run / Cloud Functions for Lightweight Transforms</h4>
+                <p>Serverless compute for small-scale data transformations and enrichment</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Serverless</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Lightweight transformations, event-driven processing, cost-effective compute
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sub-category">
+            <h4>Streaming Processing</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4>Dataflow (Beam Streaming)</h4>
+                <p>Apache Beam streaming for real-time data processing with windowing</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Stream Processing</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Real-time analytics, windowed aggregations, stream processing
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Dataproc + Spark Structured Streaming</h4>
+                <p>Managed Spark clusters with structured streaming capabilities</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Stream Processing</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Complex streaming logic, Spark ecosystem, advanced stream processing
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>BigQuery Streaming Inserts</h4>
+                <p>Real-time data insertion into BigQuery tables via streaming API</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Streaming</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Real-time analytics, dashboard updates, low-latency data availability
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Pub/Sub → BigQuery Direct Write</h4>
+                <p>Direct streaming from Pub/Sub to BigQuery without intermediate processing</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Streaming</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Simple event-to-table pipelines, real-time dashboards, minimal processing needs
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>5️⃣ Orchestration & Workflow Management</h3>
+          <div class="cloud-tools">
+            <div class="cloud-tool">
+              <h4>Cloud Composer</h4>
+              <p>Managed Apache Airflow for complex workflow orchestration and DAG management</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Orchestration</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Complex workflows, Airflow DAGs, dependency management, scheduled jobs
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Workflows</h4>
+              <p>Serverless orchestration for event-driven workflows and microservices</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Orchestration</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Event-driven orchestration, microservices coordination, serverless workflows
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Cloud Scheduler</h4>
+              <p>Cron-based job scheduling for periodic data processing tasks</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Job Scheduling</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Cron jobs, scheduled tasks, periodic data processing
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Eventarc</h4>
+              <p>Event-driven orchestration for cloud service integrations</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Event Orchestration</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Event-driven architectures, cloud service integration, automated responses
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>6️⃣ Data Modeling & Transformation</h3>
+          <div class="sub-category">
+            <h4>Modeling</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#google-bigquery">BigQuery SQL</a></h4>
+                <p>Advanced SQL with window functions, arrays, and machine learning integration</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">SQL Modeling</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Data modeling, analytical queries, complex transformations
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>dbt Core on GCP</h4>
+                <p>SQL-based transformation tool with GCP BigQuery adapter</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">Multi-Cloud</span>
+                  <span class="type-badge">Transformation</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Data warehouse transformations, analytics engineering, SQL-based pipelines
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>dbt Cloud</h4>
+                <p>Managed dbt service with CI/CD, scheduling, and collaboration</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">Multi-Cloud</span>
+                  <span class="type-badge">Transformation</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Team collaboration, managed transformations, automated testing
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>LookML (Looker)</h4>
+                <p>Data modeling language for Looker with version control and testing</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">Multi-Cloud</span>
+                  <span class="type-badge">Modeling</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Business intelligence modeling, governed data access, Looker integration
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sub-category">
+            <h4>Transformation Engines</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#google-dataflow">Dataflow (Beam)</a></h4>
+                <p>Apache Beam unified model for batch and stream processing</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Transformation</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Unified batch/stream processing, portable pipelines, complex transformations
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#dataproc">Dataproc (Spark)</a></h4>
+                <p>Apache Spark ecosystem with ML libraries and SQL interfaces</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Transformation</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Big data transformations, ML pipelines, Spark ecosystem
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>BigQuery SQL / BigQuery ML</h4>
+                <p>SQL with built-in machine learning functions for predictive analytics</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">ML Transformation</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> In-database ML, predictive analytics, SQL-based ML
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>7️⃣ Data Quality, Lineage & Observability</h3>
+          <div class="sub-category">
+            <h4>Data Quality</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4>Dataplex Data Quality</h4>
+                <p>Comprehensive data quality framework with rules and monitoring</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Data Quality</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Data quality monitoring, automated validation, quality rules
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>BigQuery Data Quality (via Dataplex)</h4>
+                <p>Native BigQuery data quality checks and monitoring</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Data Quality</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Warehouse quality monitoring, automated quality checks
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>dbt Tests</h4>
+                <p>SQL-based data testing framework for data validation</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">Multi-Cloud</span>
+                  <span class="type-badge">Data Quality</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Data testing, validation automation, quality assurance
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sub-category">
+            <h4>Lineage</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4>Dataplex Lineage</h4>
+                <p>Automated data lineage tracking and visualization</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Data Lineage</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Impact analysis, data governance, compliance reporting
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>BigQuery Built-in Lineage</h4>
+                <p>Native BigQuery data lineage for query and table relationships</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Data Lineage</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Query optimization, dependency tracking, impact analysis
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sub-category">
+            <h4>Monitoring & Observability</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4>Cloud Monitoring</h4>
+                <p>Comprehensive monitoring for all GCP services and custom metrics</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Monitoring</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Infrastructure monitoring, performance tracking, alerting
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Cloud Logging</h4>
+                <p>Centralized logging service for applications and infrastructure</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Logging</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Log aggregation, troubleshooting, audit trails
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Error Reporting</h4>
+                <p>Application error tracking and debugging with stack traces</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Error Tracking</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Application debugging, error monitoring, performance analysis
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Cloud Trace</h4>
+                <p>Distributed tracing for microservices and application performance</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Tracing</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Performance optimization, microservices debugging, latency analysis
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>8️⃣ Metadata, Catalog, Governance</h3>
+          <div class="cloud-tools">
+            <div class="cloud-tool">
+              <h4>Dataplex</h4>
+              <p>Unified platform for governance, metadata, quality, and lineage</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Governance Platform</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Data governance, metadata management, quality monitoring
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Data Catalog (now part of Dataplex)</h4>
+              <p>Enterprise data catalog for data discovery and documentation</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Data Catalog</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Data discovery, metadata management, data literacy
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>IAM</h4>
+              <p>Identity and access management for fine-grained permissions</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Access Control</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Access control, security management, compliance
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>VPC Service Controls</h4>
+              <p>Data perimeter controls for security and compliance</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Security</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Data perimeter security, compliance, data exfiltration prevention
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Cloud DLP</h4>
+              <p>Data classification, masking, and sensitive data protection</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Data Protection</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Data classification, PII protection, compliance
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>9️⃣ Serving & Consumption</h3>
+          <div class="sub-category">
+            <h4>BI & Analytics</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4>Looker</h4>
+                <p>Business intelligence platform with embedded analytics and modeling</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">Multi-Cloud</span>
+                  <span class="type-badge">Business Intelligence</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Business intelligence, embedded analytics, governed data access
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Looker Studio</h4>
+                <p>Self-service BI and visualization platform for business users</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Business Intelligence</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Self-service analytics, dashboard creation, business user empowerment
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Connected Sheets</h4>
+                <p>Google Sheets integration with BigQuery for business analytics</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Analytics</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Business analytics, spreadsheet-based analysis, familiar interface
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sub-category">
+            <h4>Reverse ETL / Operational Analytics</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4>Hightouch</h4>
+                <p>Sync warehouse data back to SaaS tools for operational analytics</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">Multi-Cloud</span>
+                  <span class="type-badge">Reverse ETL</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Sales team enablement, operational dashboards, data activation
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Census</h4>
+                <p>Operational analytics platform for warehouse-to-app data sync</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">Multi-Cloud</span>
+                  <span class="type-badge">Reverse ETL</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Customer success analytics, marketing automation, sales insights
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>🔟 ML / Feature Serving</h3>
+          <div class="cloud-tools">
+            <div class="cloud-tool">
+              <h4>Vertex AI</h4>
+              <p>Comprehensive ML platform for training, deployment, and serving</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">ML Platform</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Machine learning pipelines, model deployment, MLOps
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>BigQuery ML</h4>
+              <p>In-database machine learning for predictive analytics</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">ML Platform</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> In-database ML, predictive analytics, SQL-based ML
+              </div>
+            </div>
+            
+            <div class="cloud-tool">
+              <h4>Feature Store (Vertex AI)</h4>
+              <p>Centralized feature management for ML workflows</p>
+              <div class="tool-details">
+                <span class="cloud-badge">GCP Native</span>
+                <span class="type-badge">Feature Store</span>
+              </div>
+              <div class="when-to-use">
+                <strong>When to use:</strong> Feature engineering, ML workflows, feature reuse
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>1️⃣1️⃣ DevOps, CI/CD, Infrastructure for Data Engineering</h3>
+          <div class="sub-category">
+            <h4>Infrastructure</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4>Terraform on GCP</h4>
+                <p>Infrastructure as code for managing GCP resources declaratively</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">Multi-Cloud</span>
+                  <span class="type-badge">Infrastructure as Code</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Infrastructure automation, version control, reproducible environments
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Deployment Manager</h4>
+                <p>Declarative infrastructure deployment and configuration management</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Infrastructure as Code</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Infrastructure deployment, configuration management, environment replication
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Cloud Build</h4>
+                <p>CI/CD platform for building and deploying data applications</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">CI/CD</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Application building, automated deployment, container images
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Artifact Registry</h4>
+                <p>Container and artifact repository for data applications</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Artifact Registry</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Container storage, artifact management, deployment pipeline
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sub-category">
+            <h4>Compute Runtimes</h4>
+            <div class="cloud-tools">
+              <div class="cloud-tool">
+                <h4><a href="{{ site.baseurl }}/tools/#google-cloud-run">Cloud Run</a></h4>
+                <p>Serverless container platform for data applications</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Container Platform</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Containerized applications, serverless compute, HTTP services
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>GKE (Kubernetes)</h4>
+                <p>Managed Kubernetes cluster for container orchestration</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Container Orchestration</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Complex applications, microservices, container orchestration
+                </div>
+              </div>
+              
+              <div class="cloud-tool">
+                <h4>Compute Engine</h4>
+                <p>Virtual machines for custom data processing workloads</p>
+                <div class="tool-details">
+                  <span class="cloud-badge">GCP Native</span>
+                  <span class="type-badge">Virtual Machines</span>
+                </div>
+                <div class="when-to-use">
+                  <strong>When to use:</strong> Custom software, specialized workloads, full control
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="category-section">
+          <h3>🧭 End-to-End GCP Data Engineering Pipeline (Ordered)</h3>
+          <div class="pipeline-summary">
+            <table class="pipeline-table">
+              <thead>
+                <tr>
+                  <th>Stage</th>
+                  <th>GCP Tools</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Ingest</strong></td>
+                  <td>Pub/Sub, Datastream, Data Fusion, Storage Transfer</td>
+                  <td>Event streaming, CDC, ETL, batch transfers</td>
+                </tr>
+                <tr>
+                  <td><strong>Land</strong></td>
+                  <td>Cloud Storage</td>
+                  <td>Data lake with medallion architecture</td>
+                </tr>
+                <tr>
+                  <td><strong>Process</strong></td>
+                  <td>Dataflow, Dataproc, BigQuery</td>
+                  <td>Stream processing, Spark, SQL transformations</td>
+                </tr>
+                <tr>
+                  <td><strong>Model</strong></td>
+                  <td>dbt, BigQuery SQL, LookML</td>
+                  <td>Analytics engineering, SQL modeling, BI modeling</td>
+                </tr>
+                <tr>
+                  <td><strong>Orchestrate</strong></td>
+                  <td>Cloud Composer, Workflows</td>
+                  <td>Airflow, serverless orchestration</td>
+                </tr>
+                <tr>
+                  <td><strong>Validate</strong></td>
+                  <td>Dataplex Data Quality</td>
+                  <td>Data quality monitoring, automated validation</td>
+                </tr>
+                <tr>
+                  <td><strong>Catalog</strong></td>
+                  <td>Dataplex, Data Catalog</td>
+                  <td>Metadata management, data discovery</td>
+                </tr>
+                <tr>
+                  <td><strong>Serve</strong></td>
+                  <td>Looker, Looker Studio, Vertex AI</td>
+                  <td>Business intelligence, self-service analytics, ML serving</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>

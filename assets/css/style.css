@@ -630,6 +630,66 @@ pre code {
   margin-top: 2rem;
 }
 
+.sub-category {
+  margin-bottom: 2rem;
+}
+
+.sub-category h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.pipeline-summary {
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 2rem;
+}
+
+.pipeline-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.pipeline-table th {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.pipeline-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+}
+
+.pipeline-table tr:nth-child(even) td {
+  background: var(--background-light);
+}
+
+.pipeline-table td:first-child {
+  font-weight: 600;
+  color: var(--primary-color);
+  width: 15%;
+}
+
+.pipeline-table td:nth-child(2) {
+  width: 35%;
+  font-weight: 500;
+}
+
+.pipeline-table td:nth-child(3) {
+  width: 50%;
+  color: var(--text-light);
+}
+
 .cloud-tool {
   background: var(--background);
   padding: 2rem;
