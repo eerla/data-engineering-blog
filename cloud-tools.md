@@ -32,8 +32,14 @@ title: "Cloud Data Engineering Tools"
   </section>
 
   <section class="aws-section">
-    <h2 class="cloud-title">🟠 Amazon Web Services (AWS)</h2>
+    <div class="cloud-header" onclick="toggleCloud('aws')">
+      <h2 class="cloud-title">🟠 Amazon Web Services (AWS)</h2>
+      <span class="tool-count">50+ tools</span>
+      <span class="toggle-icon">▶</span>
+    </div>
     <p class="cloud-description">Comprehensive cloud platform with strong data engineering ecosystem</p>
+    
+    <div id="aws-tools" class="cloud-content" style="display: none;">
     
     <div class="tool-categories">
       <div class="category-section">
@@ -1164,8 +1170,14 @@ title: "Cloud Data Engineering Tools"
   
 
   <section class="gcp-section">
-    <h2 class="cloud-title">☁️ Google Cloud Platform (GCP)</h2>
+    <div class="cloud-header" onclick="toggleCloud('gcp')">
+      <h2 class="cloud-title">☁️ Google Cloud Platform (GCP)</h2>
+      <span class="tool-count">40+ tools</span>
+      <span class="toggle-icon">▶</span>
+    </div>
     <p class="cloud-description">Comprehensive cloud platform with serverless-first approach and strong ML integration</p>
+    
+    <div id="gcp-tools" class="cloud-content" style="display: none;">
     
     <div class="tool-categories">
       <div class="category-section">
@@ -2105,8 +2117,14 @@ title: "Cloud Data Engineering Tools"
   </section>
 
   <section class="azure-section">
-    <h2 class="cloud-title">🔵 Microsoft Azure</h2>
+    <div class="cloud-header" onclick="toggleCloud('azure')">
+      <h2 class="cloud-title">🔵 Microsoft Azure</h2>
+      <span class="tool-count">40+ tools</span>
+      <span class="toggle-icon">▶</span>
+    </div>
     <p class="cloud-description">Enterprise-focused cloud platform with strong Microsoft ecosystem integration</p>
+    
+    <div id="azure-tools" class="cloud-content" style="display: none;">
     
     <div class="tool-categories">
       <div class="category-section">
@@ -3233,9 +3251,39 @@ title: "Cloud Data Engineering Tools"
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</div> <!-- Close Azure section div -->
 
-  <section class="comparison-section">
+<script>
+// Cloud section toggle functionality
+function toggleCloud(cloudId) {
+  const content = document.getElementById(cloudId + '-tools');
+  const icon = event.currentTarget.querySelector('.toggle-icon');
+  
+  if (content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'block';
+    icon.textContent = '▼';
+  } else {
+    content.style.display = 'none';
+    icon.textContent = '▶';
+  }
+}
+
+// Initialize with all sections collapsed
+document.addEventListener('DOMContentLoaded', function() {
+  const cloudContents = document.querySelectorAll('.cloud-content');
+  cloudContents.forEach(content => {
+    content.style.display = 'none';
+  });
+  
+  const icons = document.querySelectorAll('.toggle-icon');
+  icons.forEach(icon => {
+    icon.textContent = '▶';
+  });
+});
+</script>
+
+<section class="comparison-section">
     <h2 class="cloud-title">🌐 Unified Cloud Data Engineering Tools Comparison</h2>
     <p class="cloud-description">Direct comparison of equivalent data engineering tools across AWS, GCP, and Azure</p>
     
@@ -3819,3 +3867,53 @@ title: "Cloud Data Engineering Tools"
     </div>
   </section>
 </div>
+
+<style>
+.cloud-header {
+  background: var(--background-secondary);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.cloud-header:hover {
+  background: var(--background-tertiary);
+}
+
+.cloud-header h2 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.tool-count {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: transform 0.2s ease;
+}
+
+.cloud-content {
+  padding: 1rem;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 2rem;
+}
+
+.aws-section, .gcp-section, .azure-section {
+  margin-bottom: 2rem;
+}
+</style>
