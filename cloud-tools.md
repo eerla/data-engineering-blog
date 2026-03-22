@@ -1166,8 +1166,9 @@ title: "Cloud Data Engineering Tools"
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</div> <!-- Close AWS section div -->
+
 
   <section class="gcp-section">
     <div class="cloud-header" onclick="toggleCloud('gcp')">
@@ -2114,7 +2115,8 @@ title: "Cloud Data Engineering Tools"
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</div> <!-- Close GCP section div -->
 
   <section class="azure-section">
     <div class="cloud-header" onclick="toggleCloud('azure')">
