@@ -106,18 +106,33 @@ title: "Home"
 
   <div class="text-center mb-3">
     <h3>Explore</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 600px; margin: 0 auto;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
       <a href="{{ site.baseurl }}/tools/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        Tools Catalog
-      </a>
-      <a href="{{ site.baseurl }}/roadmap/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        Learning Roadmap
-      </a>
-      <a href="{{ site.baseurl }}/layers/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        Data Layers
+        🛠️ Tools Catalog
       </a>
       <a href="{{ site.baseurl }}/cloud-tools/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        Cloud Tools
+        ☁️ Cloud Tools
+      </a>
+      <a href="{{ site.baseurl }}/roadmap/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        🗺️ Learning Roadmap
+      </a>
+      <a href="{{ site.baseurl }}/layers/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        🏢 Data Layers
+      </a>
+      <a href="{{ site.baseurl }}/comparisons/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        ⚖️ Tool Comparisons
+      </a>
+      <a href="{{ site.baseurl }}/blog/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        📝 Blog Posts
+      </a>
+      <a href="{{ site.baseurl }}/series/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        📚 Content Series
+      </a>
+      <a href="{{ site.baseurl }}/projects/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        🚀 Projects
+      </a>
+      <a href="{{ site.baseurl }}/about/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        👤 About Me
       </a>
     </div>
   </div>
