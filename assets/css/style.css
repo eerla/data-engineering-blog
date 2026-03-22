@@ -53,11 +53,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { font-size: 2.5rem; }
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-h4 { font-size: 1.25rem; }
-h5 { font-size: 1.125rem; }
-h6 { font-size: 1rem; }
+h2 { font-size: 2rem; margin-top: 3rem; margin-bottom: 1.5rem; }
+h3 { font-size: 1.5rem; margin-top: 2.5rem; margin-bottom: 1.5rem; }
+h4 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 1rem; }
+h5 { font-size: 1.125rem; margin-top: 1.5rem; margin-bottom: 1rem; }
+h6 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 1rem; }
 
 p {
   margin-bottom: 1rem;
@@ -191,8 +191,10 @@ strong, b {
 }
 
 .post-header {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: center;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .post-title {
@@ -230,18 +232,19 @@ strong, b {
 .post-content h4,
 .post-content h5,
 .post-content h6 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .post-content h2 {
   border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
+  margin-top: 4rem;
 }
 
 .post-content ul,
 .post-content ol {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   padding-left: 2rem;
 }
 
@@ -252,9 +255,13 @@ strong, b {
 .post-content blockquote {
   border-left: 4px solid var(--primary-color);
   padding-left: 1rem;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   font-style: italic;
   color: var(--text-light);
+}
+
+.post-content p {
+  margin-bottom: 1.5rem;
 }
 
 .post-footer {
@@ -586,6 +593,36 @@ pre code {
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 3rem; }
+
+/* Section Spacing */
+.roadmap-section,
+.tools-filters,
+.tools-grid,
+.layer-summary,
+.layer-intro,
+.layer-content,
+.tools-section,
+.next-steps {
+  margin-bottom: 4rem;
+}
+
+.content-section {
+  margin-bottom: 3rem;
+}
+
+/* Better spacing for specific sections */
+.page-header {
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  margin-bottom: 1rem;
+}
+
+.page-header p {
+  margin-bottom: 0;
+}
 
 /* Roadmap and Tools Page Styles */
 .roadmap-section,
