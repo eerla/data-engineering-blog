@@ -22,6 +22,9 @@ title: "Series"
       <li class="series-item">
         <a href="{{ site.baseurl }}/blog/you-dont-need-kafka-for-everything/">You Don't Need Kafka for Everything</a>
       </li>
+      <li class="series-item">
+        <a href="{{ site.baseurl }}/blog/delta-lake-transaction-log-acid-on-s3/">I Dug Into Delta Lake's Transaction Log</a>
+      </li>
     </ul>
   </div>
 

@@ -24,7 +24,7 @@ paginate_path: "/blog/page:num/"
 collections:
   posts:
     output: true
-    permalink: /blog/:title/
+    permalink: /:categories/:year/:month/:day/:title/
 
 # Defaults
 defaults:
