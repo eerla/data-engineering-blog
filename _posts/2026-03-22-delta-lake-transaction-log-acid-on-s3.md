@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I Dug Into Delta Lake's Transaction Log - This Is How ACID Actually Works on S3"
-date: 2024-03-15
+date: 2026-03-22
 categories: data-engineering
 tags: [delta-lake, acid, s3, data-lake, transaction-log]
 ---
