@@ -1,199 +1,302 @@
 # Data Engineering Tools Catalog
 
-# Data Sources
-- name: PostgreSQL
-  layer: Data Sources
-  category: Database
-  type: Relational
-  use_case: Application databases, ACID compliance
+# Cloud Providers
 
-- name: MySQL
-  layer: Data Sources
-  category: Database
-  type: Relational
-  use_case: Web applications, high performance
+## AWS
+- name: Amazon S3
+  layer: Data Storage
+  category: Cloud Storage
+  type: Data Lake
+  cloud: AWS
+  use_case: Object storage, data lakes
 
-- name: MongoDB
-  layer: Data Sources
-  category: Database
-  type: NoSQL
-  use_case: Flexible schemas, unstructured data
+- name: Amazon Redshift
+  layer: Data Storage
+  category: Data Warehouse
+  type: Petabyte-scale
+  cloud: AWS
+  use_case: Complex analytical queries
 
-- name: Salesforce
-  layer: Data Sources
-  category: SaaS
-  type: CRM
-  use_case: Customer analytics, sales data
+- name: Amazon Kinesis
+  layer: Data Ingestion
+  category: Cloud Service
+  type: Streaming
+  cloud: AWS
+  use_case: AWS real-time data
 
-- name: Google Analytics
-  layer: Data Sources
-  category: Analytics
-  type: Web Analytics
-  use_case: Marketing analytics, user behavior
+- name: AWS Glue
+  layer: Data Processing
+  category: ETL
+  type: Serverless
+  cloud: AWS
+  use_case: Serverless ETL, data catalog
 
-# Ingestion
+- name: Amazon QuickSight
+  layer: Data Consumption
+  category: Business Intelligence
+  type: BI Tool
+  cloud: AWS
+  use_case: AWS-native BI, dashboards
+
+## GCP
+- name: Google Cloud Storage
+  layer: Data Storage
+  category: Cloud Storage
+  type: Data Lake
+  cloud: GCP
+  use_case: Object storage, analytics
+
+- name: Google BigQuery
+  layer: Data Storage
+  category: Data Warehouse
+  type: Serverless
+  cloud: GCP
+  use_case: Large-scale analytics
+
+- name: Google Pub/Sub
+  layer: Data Ingestion
+  category: Cloud Service
+  type: Streaming
+  cloud: GCP
+  use_case: Event streaming, messaging
+
+- name: Google Dataflow
+  layer: Data Processing
+  category: Stream Processing
+  type: Serverless
+  cloud: GCP
+  use_case: Stream and batch processing
+
+- name: Google Looker
+  layer: Data Consumption
+  category: Business Intelligence
+  type: BI Tool
+  cloud: GCP
+  use_case: Embedded analytics, modeling
+
+## Azure
+- name: Azure Data Lake Storage
+  layer: Data Storage
+  category: Cloud Storage
+  type: Data Lake
+  cloud: Azure
+  use_case: Enterprise data lakes
+
+- name: Azure Synapse
+  layer: Data Storage
+  category: Data Warehouse
+  type: Analytics
+  cloud: Azure
+  use_case: Integrated analytics, data warehousing
+
+- name: Azure Event Hubs
+  layer: Data Ingestion
+  category: Cloud Service
+  type: Streaming
+  cloud: Azure
+  use_case: Real-time data ingestion
+
+- name: Azure Databricks
+  layer: Data Processing
+  category: Distributed Computing
+  type: Analytics
+  cloud: Azure
+  use_case: Big data analytics, ML
+
+- name: Power BI
+  layer: Data Consumption
+  category: Business Intelligence
+  type: BI Tool
+  cloud: Azure
+  use_case: Enterprise reporting, Office integration
+
+# Multi-Cloud & Cloud Agnostic
+- name: Snowflake
+  layer: Data Storage
+  category: Data Warehouse
+  type: Cloud Warehouse
+  cloud: Multi-Cloud
+  use_case: Enterprise analytics
+
+- name: Databricks
+  layer: Data Processing
+  category: Distributed Computing
+  type: Analytics
+  cloud: Multi-Cloud
+  use_case: Big data, ML workflows
+
+- name: Fivetran
+  layer: Data Ingestion
+  category: ELT Platform
+  type: Managed
+  cloud: Multi-Cloud
+  use_case: SaaS data integration
+
+- name: Tableau
+  layer: Data Consumption
+  category: Business Intelligence
+  type: BI Tool
+  cloud: Multi-Cloud
+  use_case: Interactive dashboards
+
+# Open Source & Self-Hosted
+
+## Orchestration
 - name: Apache Airflow
   layer: Data Ingestion
   category: Orchestration
   type: Batch
+  cloud: Open Source
   use_case: ETL pipeline orchestration
 
 - name: Prefect
   layer: Data Ingestion
   category: Orchestration
   type: Modern
+  cloud: Open Source
   use_case: Python-native workflows
 
 - name: Dagster
   layer: Data Ingestion
   category: Orchestration
   type: Data-aware
+  cloud: Open Source
   use_case: Asset governance, lineage
 
-- name: Fivetran
-  layer: Data Ingestion
-  category: ELT Platform
-  type: Managed
-  use_case: SaaS data integration
-
-- name: Apache Kafka
-  layer: Data Ingestion
-  category: Streaming
-  type: Event Streaming
-  use_case: Real-time analytics, events
-
-- name: Amazon Kinesis
-  layer: Data Ingestion
-  category: Cloud Service
-  type: Streaming
-  use_case: AWS real-time data
-
-# Processing
+## Processing
 - name: Apache Spark
   layer: Data Processing
   category: Distributed Computing
   type: Batch + Streaming
+  cloud: Open Source
   use_case: Big data transformations
 
 - name: Apache Flink
   layer: Data Processing
   category: Stream Processing
   type: Streaming
+  cloud: Open Source
   use_case: Real-time analytics, low-latency
 
 - name: dbt
   layer: Data Processing
   category: Transformation
   type: SQL-first
+  cloud: Open Source
   use_case: Data warehouse transforms
 
 - name: Pandas
   layer: Data Processing
   category: Python Library
   type: In-memory
+  cloud: Open Source
   use_case: Data analysis, cleaning
 
 - name: Great Expectations
   layer: Data Processing
   category: Data Quality
   type: Validation
+  cloud: Open Source
   use_case: Data quality testing
 
-# Storage
-- name: Amazon S3
-  layer: Data Storage
-  category: Cloud Storage
-  type: Data Lake
-  use_case: Object storage, data lakes
-
-- name: Snowflake
-  layer: Data Storage
-  category: Data Warehouse
-  type: Cloud Warehouse
-  use_case: Enterprise analytics
-
-- name: Google BigQuery
-  layer: Data Storage
-  category: Data Warehouse
-  type: Serverless
-  use_case: Large-scale analytics
-
-- name: Amazon Redshift
-  layer: Data Storage
-  category: Data Warehouse
-  type: Petabyte-scale
-  use_case: Complex analytical queries
-
+## Storage
 - name: Delta Lake
   layer: Data Storage
   category: Table Format
   type: Lakehouse
+  cloud: Open Source
   use_case: ACID transactions, reliability
 
 - name: Apache Iceberg
   layer: Data Storage
   category: Table Format
   type: Lakehouse
+  cloud: Open Source
   use_case: Schema evolution, analytics
 
-# Consumption
-- name: Tableau
-  layer: Data Consumption
-  category: Business Intelligence
-  type: BI Tool
-  use_case: Interactive dashboards
-
-- name: Power BI
-  layer: Data Consumption
-  category: Business Intelligence
-  type: BI Tool
-  use_case: Enterprise reporting
-
-- name: Looker
-  layer: Data Consumption
-  category: Business Intelligence
-  type: BI Tool
-  use_case: Embedded analytics
-
+## Consumption
 - name: Metabase
   layer: Data Consumption
   category: Business Intelligence
   type: Open Source
+  cloud: Open Source
   use_case: Self-service analytics
 
-- name: Hightouch
+- name: Superset
   layer: Data Consumption
-  category: Reverse ETL
-  type: Operational Analytics
-  use_case: Data activation
+  category: Business Intelligence
+  type: Open Source
+  cloud: Open Source
+  use_case: Interactive dashboards
 
 - name: Jupyter
   layer: Data Consumption
   category: Notebook
   type: Analysis
+  cloud: Open Source
   use_case: Data exploration
+
+# Data Sources
+- name: PostgreSQL
+  layer: Data Sources
+  category: Database
+  type: Relational
+  cloud: Open Source
+  use_case: Application databases, ACID compliance
+
+- name: MySQL
+  layer: Data Sources
+  category: Database
+  type: Relational
+  cloud: Open Source
+  use_case: Web applications, high performance
+
+- name: MongoDB
+  layer: Data Sources
+  category: Database
+  type: NoSQL
+  cloud: Open Source
+  use_case: Flexible schemas, unstructured data
+
+- name: Salesforce
+  layer: Data Sources
+  category: SaaS
+  type: CRM
+  cloud: SaaS
+  use_case: Customer analytics, sales data
+
+- name: Google Analytics
+  layer: Data Sources
+  category: Analytics
+  type: Web Analytics
+  cloud: SaaS
+  use_case: Marketing analytics, user behavior
 
 # Ecosystem
 - name: Docker
   layer: Data Engineering Ecosystem
   category: DevOps
   type: Containerization
+  cloud: Open Source
   use_case: Application deployment
 
 - name: Kubernetes
   layer: Data Engineering Ecosystem
   category: DevOps
   type: Orchestration
+  cloud: Open Source
   use_case: Container management
 
 - name: Terraform
   layer: Data Engineering Ecosystem
   category: DevOps
   type: Infrastructure as Code
+  cloud: Open Source
   use_case: Cloud resource management
 
 - name: Collibra
   layer: Data Governance
   category: Governance
   type: Data Governance
+  cloud: Enterprise
   use_case: Compliance, policies

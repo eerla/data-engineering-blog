@@ -31,51 +31,134 @@ title: "Data Engineering Tools"
     </div>
   </section>
 
-  <!-- Tools Grid -->
-  <section class="tools-grid">
-    {% assign tools = site.data.tools %}
+  <!-- Cloud-based Tools Grid -->
+  <section class="cloud-tools">
+    <h2>Tools by Cloud Provider</h2>
     
-    {% for tool in tools %}
-    <div class="tool-card" 
-         data-layer="{{ tool.layer }}" 
-         data-type="{{ tool.type }}"
-         data-category="{{ tool.category }}">
-      
-      <div class="tool-header">
-        <h3 class="tool-name">{{ tool.name }}</h3>
-        <div class="tool-badges">
-          <span class="badge layer">{{ tool.layer }}</span>
-          <span class="badge type">{{ tool.type }}</span>
-        </div>
+    <!-- AWS Section -->
+    <div class="cloud-section">
+      <div class="cloud-header" onclick="toggleCloud('aws')">
+        <h3>☁️ Amazon Web Services (AWS)</h3>
+        <span class="tool-count">{{ site.data.tools | where: "cloud", "AWS" | size }} tools</span>
+        <span class="toggle-icon">▼</span>
       </div>
       
-      <div class="tool-content">
-        <div class="tool-details">
-          <div class="detail-item">
-            <strong>Type:</strong>
-            <span class="type-tag">{{ tool.type }}</span>
+      <div id="aws-tools" class="cloud-content">
+        {% assign aws_tools = site.data.tools | where: "cloud", "AWS" %}
+        <div class="tools-grid">
+          {% for tool in aws_tools %}
+          <div class="tool-card">
+            <h4>{{ tool.name }}</h4>
+            <div class="tool-meta">
+              <span class="type-badge">{{ tool.type }}</span>
+              <span class="layer-badge">{{ tool.layer }}</span>
+            </div>
+            <p><strong>Use case:</strong> {{ tool.use_case }}</p>
           </div>
-          
-          <div class="detail-item">
-            <strong>When to use:</strong>
-            <p>{{ tool.use_case }}</p>
-          </div>
-          
-          <div class="detail-item">
-            <strong>Category:</strong>
-            <span class="category-tag">{{ tool.category }}</span>
-          </div>
-        </div>
-        
-        <div class="tool-actions">
-          <a href="{{ site.baseurl }}/layers/{{ tool.layer | replace: ' ', '-' | downcase }}/" 
-             class="layer-link">
-            View {{ tool.layer }} →
-          </a>
+          {% endfor %}
         </div>
       </div>
     </div>
-    {% endfor %}
+
+    <!-- GCP Section -->
+    <div class="cloud-section">
+      <div class="cloud-header" onclick="toggleCloud('gcp')">
+        <h3>🔵 Google Cloud Platform (GCP)</h3>
+        <span class="tool-count">{{ site.data.tools | where: "cloud", "GCP" | size }} tools</span>
+        <span class="toggle-icon">▼</span>
+      </div>
+      
+      <div id="gcp-tools" class="cloud-content">
+        {% assign gcp_tools = site.data.tools | where: "cloud", "GCP" %}
+        <div class="tools-grid">
+          {% for tool in gcp_tools %}
+          <div class="tool-card">
+            <h4>{{ tool.name }}</h4>
+            <div class="tool-meta">
+              <span class="type-badge">{{ tool.type }}</span>
+              <span class="layer-badge">{{ tool.layer }}</span>
+            </div>
+            <p><strong>Use case:</strong> {{ tool.use_case }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Azure Section -->
+    <div class="cloud-section">
+      <div class="cloud-header" onclick="toggleCloud('azure')">
+        <h3>🔷 Microsoft Azure</h3>
+        <span class="tool-count">{{ site.data.tools | where: "cloud", "Azure" | size }} tools</span>
+        <span class="toggle-icon">▼</span>
+      </div>
+      
+      <div id="azure-tools" class="cloud-content">
+        {% assign azure_tools = site.data.tools | where: "cloud", "Azure" %}
+        <div class="tools-grid">
+          {% for tool in azure_tools %}
+          <div class="tool-card">
+            <h4>{{ tool.name }}</h4>
+            <div class="tool-meta">
+              <span class="type-badge">{{ tool.type }}</span>
+              <span class="layer-badge">{{ tool.layer }}</span>
+            </div>
+            <p><strong>Use case:</strong> {{ tool.use_case }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Multi-Cloud Section -->
+    <div class="cloud-section">
+      <div class="cloud-header" onclick="toggleCloud('multi-cloud')">
+        <h3>🌐 Multi-Cloud & Cloud Agnostic</h3>
+        <span class="tool-count">{{ site.data.tools | where: "cloud", "Multi-Cloud" | size }} tools</span>
+        <span class="toggle-icon">▼</span>
+      </div>
+      
+      <div id="multi-cloud-tools" class="cloud-content">
+        {% assign multi_cloud_tools = site.data.tools | where: "cloud", "Multi-Cloud" %}
+        <div class="tools-grid">
+          {% for tool in multi_cloud_tools %}
+          <div class="tool-card">
+            <h4>{{ tool.name }}</h4>
+            <div class="tool-meta">
+              <span class="type-badge">{{ tool.type }}</span>
+              <span class="layer-badge">{{ tool.layer }}</span>
+            </div>
+            <p><strong>Use case:</strong> {{ tool.use_case }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Open Source Section -->
+    <div class="cloud-section">
+      <div class="cloud-header" onclick="toggleCloud('open-source')">
+        <h3>🔓 Open Source & Self-Hosted</h3>
+        <span class="tool-count">{{ site.data.tools | where: "cloud", "Open Source" | size }} tools</span>
+        <span class="toggle-icon">▼</span>
+      </div>
+      
+      <div id="open-source-tools" class="cloud-content">
+        {% assign open_source_tools = site.data.tools | where: "cloud", "Open Source" %}
+        <div class="tools-grid">
+          {% for tool in open_source_tools %}
+          <div class="tool-card">
+            <h4>{{ tool.name }}</h4>
+            <div class="tool-meta">
+              <span class="type-badge">{{ tool.type }}</span>
+              <span class="layer-badge">{{ tool.layer }}</span>
+            </div>
+            <p><strong>Use case:</strong> {{ tool.use_case }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Tool Comparisons -->
@@ -190,7 +273,34 @@ title: "Data Engineering Tools"
 </div>
 
 <script>
-// Simple filtering functionality
+// Cloud section toggle functionality
+function toggleCloud(cloudId) {
+  const content = document.getElementById(cloudId + '-tools');
+  const icon = event.currentTarget.querySelector('.toggle-icon');
+  
+  if (content.style.display === 'none' || content.style.display === '') {
+    content.style.display = 'block';
+    icon.textContent = '▼';
+  } else {
+    content.style.display = 'none';
+    icon.textContent = '▶';
+  }
+}
+
+// Initialize with all sections collapsed
+document.addEventListener('DOMContentLoaded', function() {
+  const cloudContents = document.querySelectorAll('.cloud-content');
+  cloudContents.forEach(content => {
+    content.style.display = 'none';
+  });
+  
+  const icons = document.querySelectorAll('.toggle-icon');
+  icons.forEach(icon => {
+    icon.textContent = '▶';
+  });
+});
+
+// Simple filtering functionality (updated for cloud-based structure)
 document.getElementById('layer-filter').addEventListener('change', filterTools);
 document.getElementById('type-filter').addEventListener('change', filterTools);
 
@@ -200,11 +310,11 @@ function filterTools() {
   const toolCards = document.querySelectorAll('.tool-card');
   
   toolCards.forEach(card => {
-    const layer = card.dataset.layer;
-    const type = card.dataset.type;
+    const layer = card.querySelector('.layer-badge').textContent;
+    const type = card.querySelector('.type-badge').textContent;
     
-    const layerMatch = layerFilter === 'all' || layer === layerFilter;
-    const typeMatch = typeFilter === 'all' || type === typeFilter;
+    const layerMatch = layerFilter === 'all' || layer.includes(layerFilter);
+    const typeMatch = typeFilter === 'all' || type.includes(typeFilter);
     
     if (layerMatch && typeMatch) {
       card.style.display = 'block';
@@ -214,3 +324,108 @@ function filterTools() {
   });
 }
 </script>
+
+<style>
+.cloud-section {
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cloud-header {
+  background: var(--background-secondary);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.cloud-header:hover {
+  background: var(--background-tertiary);
+}
+
+.cloud-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.tool-count {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  transition: transform 0.2s ease;
+}
+
+.cloud-content {
+  padding: 1.5rem;
+  background: white;
+  border-top: 1px solid var(--border-color);
+}
+
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.tool-card {
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--background-secondary);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tool-card h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+
+.tool-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.type-badge, .layer-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.type-badge {
+  background: var(--secondary-color);
+}
+
+.layer-badge {
+  background: var(--primary-color);
+}
+
+.tool-card p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.cloud-tools {
+  margin-bottom: 3rem;
+}
+</style>
