@@ -14,16 +14,16 @@ title: "Series"
     <p style="color: var(--text-light); margin-bottom: 2rem;">Common misconceptions that cost companies time and money.</p>
     <ul class="series-list">
       <li class="series-item">
-        <a href="{{ site.baseurl }}/blog/stop-overusing-spark/">Spark on GCP is Overkill - Use BigQuery Instead</a>
+        <a href="{{ site.baseurl }}/blog/2024/01/15/stop-overusing-spark/">Spark on GCP is Overkill - Use BigQuery Instead</a>
       </li>
       <li class="series-item">
-        <a href="{{ site.baseurl }}/blog/your-data-lake-is-probably-a-swamp/">Your Data Lake is Probably a Swamp</a>
+        <a href="{{ site.baseurl }}/blog/2024/01/20/your-data-lake-is-probably-a-swamp/">Your Data Lake is Probably a Swamp</a>
       </li>
       <li class="series-item">
-        <a href="{{ site.baseurl }}/blog/you-dont-need-kafka-for-everything/">You Don't Need Kafka for Everything</a>
+        <a href="{{ site.baseurl }}/blog/2024/01/25/you-dont-need-kafka-for-everything/">You Don't Need Kafka for Everything</a>
       </li>
       <li class="series-item">
-        <a href="{{ site.baseurl }}/blog/delta-lake-transaction-log-acid-on-s3/">I Dug Into Delta Lake's Transaction Log</a>
+        <a href="{{ site.baseurl }}/blog/2026/03/22/delta-lake-transaction-log-acid-on-s3/">I Dug Into Delta Lake's Transaction Log</a>
       </li>
     </ul>
   </div>
@@ -33,13 +33,13 @@ title: "Series"
     <p style="color: var(--text-light); margin-bottom: 2rem;">Real-world system design decisions and their tradeoffs.</p>
     <ul class="series-list">
       <li class="series-item">
-        <a href="{{ site.baseurl }}/blog/batch-vs-real-time/">Batch > Real-Time (Most of the Time)</a>
+        <a href="{{ site.baseurl }}/blog/2024/02/01/airflow-is-not-a-data-pipeline-tool/">Airflow is Not a Data Pipeline Tool</a>
       </li>
       <li class="series-item">
-        <a href="{{ site.baseurl }}/blog/airflow-is-not-a-data-pipeline-tool/">Airflow is Not a Data Pipeline Tool</a>
+        <a href="{{ site.baseurl }}/blog/2024/02/10/dbt-changed-data-engineering-forever/">dbt Changed Data Engineering Forever</a>
       </li>
       <li class="series-item">
-        <a href="{{ site.baseurl }}/blog/the-real-cost-of-data-observability/">The Real Cost of Data Observability</a>
+        <a href="{{ site.baseurl }}/blog/2024/02/15/the-real-cost-of-data-observability/">The Real Cost of Data Observability</a>
       </li>
     </ul>
   </div>
