@@ -50,12 +50,15 @@ title: "Data Engineering Tools"
       </div>
       
       <div class="tool-content">
-        <p class="tool-description">{{ tool.description }}</p>
-        
         <div class="tool-details">
           <div class="detail-item">
+            <strong>Type:</strong>
+            <span class="type-tag">{{ tool.type }}</span>
+          </div>
+          
+          <div class="detail-item">
             <strong>When to use:</strong>
-            <p>{{ tool.when_to_use }}</p>
+            <p>{{ tool.use_case }}</p>
           </div>
           
           <div class="detail-item">
@@ -73,6 +76,76 @@ title: "Data Engineering Tools"
       </div>
     </div>
     {% endfor %}
+  </section>
+
+  <!-- Tool Comparisons -->
+  <section class="tool-comparisons">
+    <h2>Tool Comparisons</h2>
+    
+    <div class="comparison-grid">
+      <div class="comparison-card">
+        <h3>🔄 Orchestration Tools</h3>
+        <div class="tools-compared">
+          <div class="tool-compare-item">
+            <strong>Airflow:</strong> Industry standard, batch-focused
+          </div>
+          <div class="tool-compare-item">
+            <strong>Prefect:</strong> Modern, Python-native
+          </div>
+          <div class="tool-compare-item">
+            <strong>Dagster:</strong> Data-aware, asset governance
+          </div>
+        </div>
+      </div>
+      
+      <div class="comparison-card">
+        <h3>📊 Data Warehouses</h3>
+        <div class="tools-compared">
+          <div class="tool-compare-item">
+            <strong>Snowflake:</strong> Multi-cloud, auto-scaling
+          </div>
+          <div class="tool-compare-item">
+            <strong>BigQuery:</strong> Serverless, ML-integrated
+          </div>
+          <div class="tool-compare-item">
+            <strong>Redshift:</strong> Petabyte-scale, AWS-native
+          </div>
+        </div>
+      </div>
+      
+      <div class="comparison-card">
+        <h3>📈 BI Tools</h3>
+        <div class="tools-compared">
+          <div class="tool-compare-item">
+            <strong>Tableau:</strong> Enterprise, visual analytics
+          </div>
+          <div class="tool-compare-item">
+            <strong>Power BI:</strong> Microsoft ecosystem
+          </div>
+          <div class="tool-compare-item">
+            <strong>Looker:</strong> Embedded analytics, modeling
+          </div>
+          <div class="tool-compare-item">
+            <strong>Metabase:</strong> Open-source, simple
+          </div>
+        </div>
+      </div>
+      
+      <div class="comparison-card">
+        <h3>🏞️ Storage Formats</h3>
+        <div class="tools-compared">
+          <div class="tool-compare-item">
+            <strong>S3:</strong> Object storage standard
+          </div>
+          <div class="tool-compare-item">
+            <strong>Delta Lake:</strong> ACID transactions, reliability
+          </div>
+          <div class="tool-compare-item">
+            <strong>Iceberg:</strong> Schema evolution, multi-engine
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Layer Summary -->

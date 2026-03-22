@@ -1,323 +1,199 @@
 # Data Engineering Tools Catalog
 
-# ---------------- DATA SOURCES ----------------
-
+# Data Sources
 - name: PostgreSQL
   layer: Data Sources
-  type: Database
-  description: Enterprise-grade open-source relational database with advanced features and strong consistency
-  use_case: Application databases, transactional systems, and structured data storage requiring ACID compliance
   category: Database
+  type: Relational
+  use_case: Application databases, ACID compliance
 
 - name: MySQL
   layer: Data Sources
-  type: Database
-  description: World's most popular open-source relational database known for reliability and ease of use
-  use_case: Web applications, e-commerce platforms, and transactional systems requiring high performance
   category: Database
+  type: Relational
+  use_case: Web applications, high performance
 
 - name: MongoDB
   layer: Data Sources
-  type: NoSQL
-  description: Flexible document-based NoSQL database designed for unstructured and semi-structured data
-  use_case: Content management systems, real-time applications, and rapidly evolving data schemas
   category: Database
+  type: NoSQL
+  use_case: Flexible schemas, unstructured data
 
 - name: Salesforce
   layer: Data Sources
-  type: SaaS
-  description: Leading CRM platform generating comprehensive customer relationship and sales data
-  use_case: Customer analytics, sales pipeline tracking, and business intelligence integration
   category: SaaS
+  type: CRM
+  use_case: Customer analytics, sales data
 
 - name: Google Analytics
   layer: Data Sources
-  type: Analytics
-  description: Comprehensive web analytics platform providing user behavior and traffic insights
-  use_case: Marketing analytics, conversion tracking, and user journey optimization
   category: Analytics
+  type: Web Analytics
+  use_case: Marketing analytics, user behavior
 
-# ---------------- INGESTION ----------------
-
+# Ingestion
 - name: Apache Airflow
   layer: Data Ingestion
-  type: Batch Orchestration
-  description: Industry-standard workflow scheduler for managing complex data pipelines and dependencies
-  use_case: ETL pipeline orchestration, scheduled data processing, and workflow automation
   category: Orchestration
+  type: Batch
+  use_case: ETL pipeline orchestration
 
 - name: Prefect
   layer: Data Ingestion
-  type: Orchestration
-  description: Modern workflow orchestration platform with native Python support and dynamic scaling
-  use_case: Building reliable data pipelines, real-time workflow monitoring, and infrastructure automation
   category: Orchestration
+  type: Modern
+  use_case: Python-native workflows
 
 - name: Dagster
   layer: Data Ingestion
-  type: Orchestration
-  description: Data-aware orchestration platform that understands pipeline dependencies and data assets
-  use_case: Managing complex data workflows, data lineage tracking, and asset governance
   category: Orchestration
+  type: Data-aware
+  use_case: Asset governance, lineage
 
 - name: Fivetran
   layer: Data Ingestion
-  type: Managed ELT
-  description: Fully managed data ingestion service with 300+ pre-built connectors for SaaS platforms
-  use_case: Rapid SaaS data integration, warehouse loading, and automated schema management
   category: ELT Platform
-
-- name: Stitch
-  layer: Data Ingestion
-  type: Managed ELT
-  description: Cloud-based ETL service focused on simplicity and reliability for data teams
-  use_case: Quick data source integration, automated data syncing, and warehouse population
-  category: ELT Platform
+  type: Managed
+  use_case: SaaS data integration
 
 - name: Apache Kafka
   layer: Data Ingestion
-  type: Streaming
-  description: Distributed event streaming platform designed for high-throughput real-time data pipelines
-  use_case: Real-time analytics, event-driven architectures, and microservices communication
   category: Streaming
+  type: Event Streaming
+  use_case: Real-time analytics, events
 
 - name: Amazon Kinesis
   layer: Data Ingestion
-  type: Streaming
-  description: AWS-native streaming service for ingesting and processing large volumes of real-time data
-  use_case: IoT data ingestion, log processing, and real-time analytics in AWS ecosystem
   category: Cloud Service
-
-- name: Google Pub/Sub
-  layer: Data Ingestion
   type: Streaming
-  description: Scalable messaging and event ingestion service for building event-driven systems
-  use_case: Microservices communication, real-time event processing, and cloud architecture integration
-  category: Cloud Service
+  use_case: AWS real-time data
 
-- name: Apache Pulsar
-  layer: Data Ingestion
-  type: Streaming
-  description: Cloud-native distributed messaging system supporting both streaming and queuing patterns
-  use_case: Event streaming, message queuing, and real-time data distribution across systems
-  category: Streaming
-
-- name: Redpanda
-  layer: Data Ingestion
-  type: Streaming
-  description: Kafka-compatible streaming platform designed for high performance and simplified operations
-  use_case: High-throughput event processing, Kafka migration, and real-time data pipelines
-  category: Streaming
-
-# ---------------- PROCESSING ----------------
-
+# Processing
 - name: Apache Spark
   layer: Data Processing
-  type: Batch + Streaming
-  description: Distributed computing engine for large-scale data processing and analytics workloads
-  use_case: Big data transformations, machine learning pipelines, and complex analytics
   category: Distributed Computing
+  type: Batch + Streaming
+  use_case: Big data transformations
 
 - name: Apache Flink
   layer: Data Processing
-  type: Streaming
-  description: Stream processing framework for low-latency, stateful real-time applications
-  use_case: Real-time analytics, fraud detection, and live monitoring systems
   category: Stream Processing
+  type: Streaming
+  use_case: Real-time analytics, low-latency
 
 - name: dbt
   layer: Data Processing
-  type: Transformation
-  description: SQL-first transformation tool that brings software engineering practices to data analytics
-  use_case: Data warehouse transformations, analytics engineering, and SQL-based pipeline development
   category: Transformation
+  type: SQL-first
+  use_case: Data warehouse transforms
 
 - name: Pandas
   layer: Data Processing
+  category: Python Library
   type: In-memory
-  description: Python data analysis library providing powerful data structures and analysis tools
-  use_case: Data cleaning, exploratory analysis, and medium-scale data transformations
-  category: Python Library
-
-- name: Dask
-  layer: Data Processing
-  type: Parallel Computing
-  description: Parallel computing library that scales Python analytics from laptops to clusters
-  use_case: Large dataset processing, parallel data science, and scaling Python workflows
-  category: Python Library
+  use_case: Data analysis, cleaning
 
 - name: Great Expectations
   layer: Data Processing
-  type: Data Quality
-  description: Comprehensive data validation framework for ensuring data quality and reliability
-  use_case: Data quality testing, pipeline validation, and automated data documentation
   category: Data Quality
+  type: Validation
+  use_case: Data quality testing
 
-- name: Monte Carlo
-  layer: Data Processing
-  type: Observability
-  description: Data observability platform providing end-to-end visibility into data pipelines
-  use_case: Data pipeline monitoring, freshness tracking, and data reliability assurance
-  category: Monitoring
-
-# ---------------- STORAGE ----------------
-
+# Storage
 - name: Amazon S3
   layer: Data Storage
-  type: Data Lake
-  description: Industry-standard object storage service for unlimited scalable data storage
-  use_case: Data lake storage, backup and archiving, and static content delivery
   category: Cloud Storage
-
-- name: Azure Data Lake Storage
-  layer: Data Storage
   type: Data Lake
-  description: Enterprise-grade scalable storage optimized for big data analytics workloads
-  use_case: Enterprise data lakes, compliance storage, and analytics workloads in Azure
-  category: Cloud Storage
-
-- name: Google Cloud Storage
-  layer: Data Storage
-  type: Data Lake
-  description: Unified object storage service providing scalable and cost-effective data storage
-  use_case: Data lake implementation, analytics storage, and application data backup in GCP
-  category: Cloud Storage
+  use_case: Object storage, data lakes
 
 - name: Snowflake
   layer: Data Storage
-  type: Data Warehouse
-  description: Cloud data platform with automatic scaling, performance, and data sharing
-  use_case: Enterprise analytics, data warehousing, and multi-cloud data strategy
   category: Data Warehouse
+  type: Cloud Warehouse
+  use_case: Enterprise analytics
 
 - name: Google BigQuery
   layer: Data Storage
-  type: Data Warehouse
-  description: Serverless data warehouse with built-in machine learning and geospatial analytics
-  use_case: Large-scale analytics, real-time dashboards, and cost-effective data warehousing
   category: Data Warehouse
+  type: Serverless
+  use_case: Large-scale analytics
 
 - name: Amazon Redshift
   layer: Data Storage
-  type: Data Warehouse
-  description: Petabyte-scale data warehouse service optimized for complex analytical queries
-  use_case: Enterprise analytics, business intelligence, and large-scale data warehousing
   category: Data Warehouse
+  type: Petabyte-scale
+  use_case: Complex analytical queries
 
 - name: Delta Lake
   layer: Data Storage
-  type: Lakehouse
-  description: Storage format bringing ACID transactions and time travel to data lakes
-  use_case: Reliable data lakes, streaming analytics, and machine learning pipelines
   category: Table Format
+  type: Lakehouse
+  use_case: ACID transactions, reliability
 
 - name: Apache Iceberg
   layer: Data Storage
-  type: Lakehouse
-  description: Open table format for massive analytic datasets with schema evolution support
-  use_case: Large-scale analytics, data lake queries, and multi-engine data processing
   category: Table Format
+  type: Lakehouse
+  use_case: Schema evolution, analytics
 
-# ---------------- CONSUMPTION ----------------
-
+# Consumption
 - name: Tableau
   layer: Data Consumption
-  type: BI Tool
-  description: Leading data visualization platform for creating interactive dashboards and insights
-  use_case: Business intelligence, executive dashboards, and data storytelling
   category: Business Intelligence
+  type: BI Tool
+  use_case: Interactive dashboards
 
 - name: Power BI
   layer: Data Consumption
-  type: BI Tool
-  description: Microsoft's business analytics platform with deep Office 365 integration
-  use_case: Enterprise reporting, Office analytics integration, and self-service BI
   category: Business Intelligence
+  type: BI Tool
+  use_case: Enterprise reporting
 
 - name: Looker
   layer: Data Consumption
-  type: BI Tool
-  description: Data exploration and BI platform with embedded analytics and modeling layer
-  use_case: Governed data access, embedded analytics, and business intelligence
   category: Business Intelligence
+  type: BI Tool
+  use_case: Embedded analytics
 
 - name: Metabase
   layer: Data Consumption
-  type: BI Tool
-  description: Open-source business intelligence tool focused on simplicity and ease of use
-  use_case: Self-service analytics, team dashboards, and SQL-based data exploration
   category: Business Intelligence
-
-- name: Superset
-  layer: Data Consumption
-  type: BI Tool
-  description: Open-source data exploration platform with advanced visualization capabilities
-  use_case: Interactive dashboards, SQL-based analytics, and data visualization
-  category: Business Intelligence
+  type: Open Source
+  use_case: Self-service analytics
 
 - name: Hightouch
   layer: Data Consumption
-  type: Reverse ETL
-  description: Operational analytics platform that syncs warehouse data back to business tools
-  use_case: Sales team enablement, operational dashboards, and data activation
   category: Reverse ETL
-
-- name: Census
-  layer: Data Consumption
-  type: Reverse ETL
-  description: Operational analytics platform for sending warehouse data to SaaS applications
-  use_case: Customer success analytics, marketing automation, and sales team insights
-  category: Reverse ETL
+  type: Operational Analytics
+  use_case: Data activation
 
 - name: Jupyter
   layer: Data Consumption
-  type: Notebook
-  description: Interactive notebook environment for data analysis, visualization, and collaboration
-  use_case: Data exploration, machine learning development, and collaborative analysis
   category: Notebook
+  type: Analysis
+  use_case: Data exploration
 
-# ---------------- ORCHESTRATION / DEVOPS ----------------
-
+# Ecosystem
 - name: Docker
   layer: Data Engineering Ecosystem
-  type: Containerization
-  description: Container platform for packaging and running applications in isolated environments
-  use_case: Application deployment, environment consistency, and microservices architecture
   category: DevOps
+  type: Containerization
+  use_case: Application deployment
 
 - name: Kubernetes
   layer: Data Engineering Ecosystem
-  type: Orchestration
-  description: Container orchestration system for automating deployment and scaling applications
-  use_case: Microservices management, auto-scaling, and production deployment
   category: DevOps
+  type: Orchestration
+  use_case: Container management
 
 - name: Terraform
   layer: Data Engineering Ecosystem
-  type: Infrastructure as Code
-  description: Infrastructure provisioning tool for managing cloud resources through code
-  use_case: Cloud resource management, infrastructure automation, and environment provisioning
   category: DevOps
-
-- name: Git
-  layer: Data Engineering Ecosystem
-  type: Version Control
-  description: Distributed version control system for tracking code changes and collaboration
-  use_case: Code collaboration, version tracking, and deployment automation
-  category: Version Control
-
-# ---------------- DATA GOVERNANCE ----------------
+  type: Infrastructure as Code
+  use_case: Cloud resource management
 
 - name: Collibra
   layer: Data Governance
-  type: Governance
-  description: Enterprise data governance platform for managing data policies and compliance
-  use_case: Regulatory compliance, data policy management, and governance automation
   category: Governance
-
-- name: Alation
-  layer: Data Governance
-  type: Catalog
-  description: Enterprise data catalog platform for data discovery and documentation
-  use_case: Data discovery, metadata management, and data literacy programs
-  category: Catalog
+  type: Data Governance
+  use_case: Compliance, policies

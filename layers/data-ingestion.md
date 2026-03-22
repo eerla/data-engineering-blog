@@ -82,23 +82,18 @@ title: "Data Ingestion"
 
   <section class="tools-section">
     <h2>Recommended Tools</h2>
-    <p>Tools for data ingestion by category:</p>
     
-    <div class="tools-list">
+    <div class="tools-grid">
       {% assign ingestion_tools = site.data.tools | where: "layer", "Data Ingestion" %}
       
       {% for tool in ingestion_tools %}
-      <div class="tool-item">
-        <h4><a href="{{ site.baseurl }}/tools/#{{ tool.name | replace: ' ', '-' | downcase }}">{{ tool.name }}</a></h4>
-        <p>{{ tool.description }}</p>
+      <div class="tool-card">
+        <h4>{{ tool.name }}</h4>
         <div class="tool-meta">
           <span class="type-badge">{{ tool.type }}</span>
           <span class="category-badge">{{ tool.category }}</span>
         </div>
-        <div class="when-to-use">
-          <strong>When to use:</strong> {{ tool.use_case }}
-        </div>
-        </div>
+        <p><strong>Use case:</strong> {{ tool.use_case }}</p>
       </div>
       {% endfor %}
     </div>
