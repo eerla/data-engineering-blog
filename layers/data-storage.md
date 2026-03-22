@@ -90,14 +90,10 @@ title: "Data Storage"
       {% for tool in storage_tools %}
       <div class="tool-item">
         <h4><a href="{{ site.baseurl }}/tools/#{{ tool.name | replace: ' ', '-' | downcase }}">{{ tool.name }}</a></h4>
-        <p>{{ tool.description }}</p>
+        <p><strong>Use case:</strong> {{ tool.use_case }}</p>
         <div class="tool-meta">
           <span class="type-badge">{{ tool.type }}</span>
           <span class="category-badge">{{ tool.category }}</span>
-        </div>
-        <div class="when-to-use">
-          <strong>When to use:</strong> {{ tool.use_case }}
-        </div>
         </div>
       </div>
       {% endfor %}
