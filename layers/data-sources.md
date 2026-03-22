@@ -72,15 +72,18 @@ title: "Data Sources"
     <p>Tools for working with different data sources:</p>
     
     <div class="tools-list">
-      {% assign ingestion_tools = site.data.tools | where: "layer", "Data Ingestion" %}
+      {% assign source_tools = site.data.tools | where: "layer", "Data Sources" %}
       
-      {% for tool in ingestion_tools %}
+      {% for tool in source_tools %}
       <div class="tool-item">
         <h4><a href="{{ site.baseurl }}/tools/#{{ tool.name | replace: ' ', '-' | downcase }}">{{ tool.name }}</a></h4>
         <p>{{ tool.description }}</p>
         <div class="tool-meta">
           <span class="type-badge">{{ tool.type }}</span>
           <span class="category-badge">{{ tool.category }}</span>
+        </div>
+        <div class="when-to-use">
+          <strong>When to use:</strong> {{ tool.use_case }}
         </div>
       </div>
       {% endfor %}

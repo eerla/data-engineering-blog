@@ -96,7 +96,8 @@ title: "Data Processing"
           <span class="category-badge">{{ tool.category }}</span>
         </div>
         <div class="when-to-use">
-          <strong>When to use:</strong> {{ tool.when_to_use }}
+          <strong>When to use:</strong> {{ tool.use_case }}
+        </div>
         </div>
       </div>
       {% endfor %}

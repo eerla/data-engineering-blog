@@ -514,6 +514,30 @@ pre code {
   font-size: 0.9rem;
 }
 
+.when-to-use {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Better spacing between sections */
+.layer-intro,
+.tools-section,
+.next-steps {
+  margin-bottom: 4rem;
+}
+
+.type-grid {
+  margin-bottom: 3rem;
+}
+
+.tools-list {
+  margin-top: 2rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {
