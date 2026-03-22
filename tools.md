@@ -161,115 +161,117 @@ title: "Data Engineering Tools"
     </div>
   </section>
 
-  <!-- Tool Comparisons -->
-  <section class="tool-comparisons">
-    <h2>Tool Comparisons</h2>
-    
-    <div class="comparison-grid">
-      <div class="comparison-card">
-        <h3>🔄 Orchestration Tools</h3>
-        <div class="tools-compared">
-          <div class="tool-compare-item">
-            <strong>Airflow:</strong> Industry standard, batch-focused
+  <!-- Tool Comparisons and Layer Summary Side by Side -->
+  <div class="tools-layout">
+    <!-- Tool Comparisons -->
+    <section class="comparison-section">
+      <h2>Tool Comparisons</h2>
+      <div class="comparison-grid">
+        <div class="comparison-card">
+          <h3>🔄 ETL Tools</h3>
+          <div class="tools-compared">
+            <div class="tool-compare-item">
+              <strong>Airflow:</strong> Complex workflows, battle-tested
+            </div>
+            <div class="tool-compare-item">
+              <strong>Prefect:</strong> Python-native, modern
+            </div>
+            <div class="tool-compare-item">
+              <strong>Dagster:</strong> Asset governance, lineage
+            </div>
           </div>
-          <div class="tool-compare-item">
-            <strong>Prefect:</strong> Modern, Python-native
+        </div>
+        
+        <div class="comparison-card">
+          <h3>⚡ Streaming</h3>
+          <div class="tools-compared">
+            <div class="tool-compare-item">
+              <strong>Kafka:</strong> High throughput, distributed
+            </div>
+            <div class="tool-compare-item">
+              <strong>Pub/Sub:</strong> Google Cloud native
+            </div>
+            <div class="tool-compare-item">
+              <strong>Kinesis:</strong> AWS integrated, scalable
+            </div>
           </div>
-          <div class="tool-compare-item">
-            <strong>Dagster:</strong> Data-aware, asset governance
+        </div>
+        
+        <div class="comparison-card">
+          <h3>📈 BI Tools</h3>
+          <div class="tools-compared">
+            <div class="tool-compare-item">
+              <strong>Tableau:</strong> Enterprise, visual analytics
+            </div>
+            <div class="tool-compare-item">
+              <strong>Power BI:</strong> Microsoft ecosystem
+            </div>
+            <div class="tool-compare-item">
+              <strong>Looker:</strong> Embedded analytics, modeling
+            </div>
+            <div class="tool-compare-item">
+              <strong>Metabase:</strong> Open-source, simple
+            </div>
+          </div>
+        </div>
+        
+        <div class="comparison-card">
+          <h3>🏞️ Storage Formats</h3>
+          <div class="tools-compared">
+            <div class="tool-compare-item">
+              <strong>S3:</strong> Object storage standard
+            </div>
+            <div class="tool-compare-item">
+              <strong>Delta Lake:</strong> ACID transactions, reliability
+            </div>
+            <div class="tool-compare-item">
+              <strong>Iceberg:</strong> Schema evolution, multi-engine
+            </div>
           </div>
         </div>
       </div>
-      
-      <div class="comparison-card">
-        <h3>📊 Data Warehouses</h3>
-        <div class="tools-compared">
-          <div class="tool-compare-item">
-            <strong>Snowflake:</strong> Multi-cloud, auto-scaling
-          </div>
-          <div class="tool-compare-item">
-            <strong>BigQuery:</strong> Serverless, ML-integrated
-          </div>
-          <div class="tool-compare-item">
-            <strong>Redshift:</strong> Petabyte-scale, AWS-native
-          </div>
-        </div>
-      </div>
-      
-      <div class="comparison-card">
-        <h3>📈 BI Tools</h3>
-        <div class="tools-compared">
-          <div class="tool-compare-item">
-            <strong>Tableau:</strong> Enterprise, visual analytics
-          </div>
-          <div class="tool-compare-item">
-            <strong>Power BI:</strong> Microsoft ecosystem
-          </div>
-          <div class="tool-compare-item">
-            <strong>Looker:</strong> Embedded analytics, modeling
-          </div>
-          <div class="tool-compare-item">
-            <strong>Metabase:</strong> Open-source, simple
-          </div>
-        </div>
-      </div>
-      
-      <div class="comparison-card">
-        <h3>🏞️ Storage Formats</h3>
-        <div class="tools-compared">
-          <div class="tool-compare-item">
-            <strong>S3:</strong> Object storage standard
-          </div>
-          <div class="tool-compare-item">
-            <strong>Delta Lake:</strong> ACID transactions, reliability
-          </div>
-          <div class="tool-compare-item">
-            <strong>Iceberg:</strong> Schema evolution, multi-engine
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Layer Summary -->
-  <section class="layer-summary">
-    <h2>Tools by Layer</h2>
-    
-    {% assign ingestion_tools = tools | where: "layer", "Data Ingestion" %}
-    {% assign processing_tools = tools | where: "layer", "Data Processing" %}
-    {% assign storage_tools = tools | where: "layer", "Data Storage" %}
-    {% assign consumption_tools = tools | where: "layer", "Data Consumption" %}
-    
-    <div class="summary-grid">
-      <div class="summary-card">
-        <h3>Data Ingestion</h3>
-        <p>Moving data from sources to systems</p>
-        <div class="tool-count">{{ ingestion_tools.size }} tools</div>
-        <a href="{{ site.baseurl }}/layers/data-ingestion/" class="explore-link">Explore Layer</a>
-      </div>
+    <!-- Layer Summary -->
+    <section class="layer-summary">
+      <h2>Tools by Layer</h2>
       
-      <div class="summary-card">
-        <h3>Data Processing</h3>
-        <p>Transforming data into insights</p>
-        <div class="tool-count">{{ processing_tools.size }} tools</div>
-        <a href="{{ site.baseurl }}/layers/data-processing/" class="explore-link">Explore Layer</a>
-      </div>
+      {% assign ingestion_tools = tools | where: "layer", "Data Ingestion" %}
+      {% assign processing_tools = tools | where: "layer", "Data Processing" %}
+      {% assign storage_tools = tools | where: "layer", "Data Storage" %}
+      {% assign consumption_tools = tools | where: "layer", "Data Consumption" %}
       
-      <div class="summary-card">
-        <h3>Data Storage</h3>
-        <p>Storing and organizing data</p>
-        <div class="tool-count">{{ storage_tools.size }} tools</div>
-        <a href="{{ site.baseurl }}/layers/data-storage/" class="explore-link">Explore Layer</a>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <h3>Data Ingestion</h3>
+          <p>Moving data from sources to systems</p>
+          <div class="tool-count">{{ ingestion_tools.size }} tools</div>
+          <a href="{{ site.baseurl }}/layers/data-ingestion/" class="explore-link">Explore Layer</a>
+        </div>
+        
+        <div class="summary-card">
+          <h3>Data Processing</h3>
+          <p>Transforming data into insights</p>
+          <div class="tool-count">{{ processing_tools.size }} tools</div>
+          <a href="{{ site.baseurl }}/layers/data-processing/" class="explore-link">Explore Layer</a>
+        </div>
+        
+        <div class="summary-card">
+          <h3>Data Storage</h3>
+          <p>Storing and organizing data</p>
+          <div class="tool-count">{{ storage_tools.size }} tools</div>
+          <a href="{{ site.baseurl }}/layers/data-storage/" class="explore-link">Explore Layer</a>
+        </div>
+        
+        <div class="summary-card">
+          <h3>Data Consumption</h3>
+          <p>Making data accessible and useful</p>
+          <div class="tool-count">{{ consumption_tools.size }} tools</div>
+          <a href="{{ site.baseurl }}/layers/data-consumption/" class="explore-link">Explore Layer</a>
+        </div>
       </div>
-      
-      <div class="summary-card">
-        <h3>Data Consumption</h3>
-        <p>Making data accessible and useful</p>
-        <div class="tool-count">{{ consumption_tools.size }} tools</div>
-        <a href="{{ site.baseurl }}/layers/data-consumption/" class="explore-link">Explore Layer</a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>
 
 <script>

@@ -1511,6 +1511,26 @@ pre code {
   color: var(--text-light);
 }
 
+/* Tools Page - Horizontal Layout for Sections */
+.tools-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.comparison-section,
+.layer-summary {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .tools-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .layer-card {
