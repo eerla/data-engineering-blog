@@ -15,6 +15,7 @@
     - APIs (REST, GraphQL)
     - File systems (CSV, JSON, Parquet)
     - Streaming sources (Kafka, Kinesis)
+    - SaaS platforms (Salesforce, Google Analytics)
 
 - id: data_ingestion
   name: Data Ingestion
@@ -32,6 +33,7 @@
     - Stream processing (continuous flow)
     - Change Data Capture (CDC)
     - API-based ingestion
+    - Managed ELT services
 
 - id: data_processing
   name: Data Processing
@@ -44,11 +46,13 @@
     - Aggregation and summarization
     - Business logic implementation
     - Performance optimization
+    - Data quality and validation
   types:
     - Batch processing (ETL/ELT)
     - Stream processing (real-time)
     - Machine learning pipelines
     - Data validation and cleaning
+    - Data observability
 
 - id: data_storage
   name: Data Storage
@@ -65,7 +69,7 @@
     - Data warehouses (BigQuery, Snowflake)
     - Data lakes (S3, GCS)
     - Lakehouses (Iceberg, Delta)
-    - Databases (PostgreSQL, MongoDB)
+    - Table formats (Parquet, Avro)
 
 - id: data_consumption
   name: Data Consumption
@@ -83,3 +87,38 @@
     - APIs and data services
     - Notebooks and analysis tools
     - Automated reporting systems
+    - Reverse ETL (operational analytics)
+
+- id: data_engineering_ecosystem
+  name: Data Engineering Ecosystem
+  description: Supporting tools and infrastructure for data engineering
+  analogy: The utilities and infrastructure that keep the entire system running smoothly
+  depends_on: null
+  next: null
+  problems_solved:
+    - Infrastructure management
+    - Code versioning and collaboration
+    - Containerization and deployment
+    - Infrastructure as code
+  types:
+    - Containerization (Docker)
+    - Orchestration (Kubernetes)
+    - Version Control (Git)
+    - Infrastructure as Code (Terraform)
+
+- id: data_governance
+  name: Data Governance
+  description: Managing data quality, policies, and compliance
+  analogy: The quality control and regulatory compliance department
+  depends_on: null
+  next: null
+  problems_solved:
+    - Data quality and validation
+    - Data cataloging and discovery
+    - Policy and compliance management
+    - Data lineage tracking
+  types:
+    - Data quality frameworks
+    - Data catalogs
+    - Governance platforms
+    - Compliance tools
