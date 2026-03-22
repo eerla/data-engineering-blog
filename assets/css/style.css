@@ -1214,6 +1214,254 @@ pre code {
   margin-bottom: 1rem;
 }
 
+/* Layers Page Styles */
+.layers-intro {
+  margin-bottom: 3rem;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.layer-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.layer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.layer-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  min-width: 60px;
+  text-align: center;
+  line-height: 1;
+}
+
+.layer-content {
+  flex: 1;
+}
+
+.layer-content h3 {
+  margin-bottom: 0.5rem;
+}
+
+.layer-content h3 a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.layer-content h3 a:hover {
+  color: var(--primary-color);
+}
+
+.layer-content p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.layer-problems {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.layer-next {
+  font-size: 0.9rem;
+}
+
+.layer-next a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.layer-next a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Journey Section */
+.journey-section {
+  background: var(--background-light);
+  padding: 3rem;
+  border-radius: 8px;
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.journey-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.journey-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.journey-step {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease;
+}
+
+.journey-step.completed {
+  background: var(--primary-light);
+  border-color: var(--primary-color);
+}
+
+.journey-step:hover {
+  transform: translateY(-2px);
+}
+
+.step-icon {
+  font-size: 2rem;
+  min-width: 50px;
+}
+
+.step-text {
+  text-align: left;
+}
+
+.step-text strong {
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.step-text a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.step-text a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+.journey-arrow {
+  font-size: 2rem;
+  color: var(--text-light);
+  font-weight: bold;
+}
+
+/* Tools Preview Section */
+.tools-preview {
+  margin-top: 3rem;
+}
+
+.tools-preview h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.preview-card {
+  background: var(--background-light);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.preview-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.preview-card h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.tool-count {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--link-color);
+  margin: 1rem 0;
+}
+
+.preview-link {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.preview-link:hover {
+  color: var(--link-hover);
+  background: var(--background);
+  text-decoration: none;
+  border-color: var(--link-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .layer-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .layer-number {
+    margin: 0 auto;
+  }
+  
+  .journey-visual {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .journey-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .preview-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+}
+
 .page-header p {
   margin-bottom: 0;
 }
