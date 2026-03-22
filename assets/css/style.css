@@ -1435,6 +1435,82 @@ pre code {
   border-color: var(--link-color);
 }
 
+/* Tools Page - Cloud Tools Section */
+.cloud-tools {
+  margin-bottom: 3rem;
+}
+
+.cloud-section {
+  margin-bottom: 2rem;
+}
+
+.cloud-header {
+  background: var(--background-light);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.cloud-header:hover {
+  background: var(--background);
+}
+
+.cloud-header h3 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.cloud-content {
+  display: none;
+  margin-bottom: 1rem;
+}
+
+.cloud-content.active {
+  display: block;
+}
+
+.toggle-icon {
+  transition: transform 0.2s ease;
+}
+
+.cloud-header.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+.tool-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.type-badge, .layer-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.type-badge {
+  background: var(--secondary-color);
+}
+
+.layer-badge {
+  background: var(--primary-color);
+}
+
+.tool-card p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-light);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .layer-card {
