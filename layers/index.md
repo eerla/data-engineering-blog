@@ -101,7 +101,7 @@ title: "Data Engineering Layers"
       <div class="journey-step">
         <div class="step-icon">🛠️</div>
         <div class="step-text">
-          <strong>Explore Tools</strong><br>
+          <strong><a href="{{ site.baseurl }}/tools/" style="color: inherit; text-decoration: none;">Explore Tools</a></strong><br>
           Find solutions for each layer
         </div>
       </div>
