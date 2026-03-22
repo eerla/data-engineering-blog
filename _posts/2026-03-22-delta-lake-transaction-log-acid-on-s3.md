@@ -14,7 +14,8 @@ A few years ago, if someone told me they were doing MERGE, UPDATE, DELETE on S3,
 Then I started digging into Delta Lake.
 What I found wasn't magic. It was a very deliberate systems design trade-off.
 
----
+![Delta Lake Architecture](/data-engineering-blog/assets/images/blog/delta-lake-architecture.png)
+*Delta Lake adds a transaction log layer on top of immutable data files*
 
 ## Why object stores break transactional systems
 Object stores like S3, ADLS, and GCS were never designed for databases.
