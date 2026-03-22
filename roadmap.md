@@ -27,6 +27,12 @@ title: "Data Engineering Roadmap"
       </div>
       
       <div class="foundation-item">
+        <h3>Apache Spark (PySpark)</h3>
+        <p>Big data processing framework for distributed computing and large-scale data analysis.</p>
+        <div class="next-step">Next step → <a href="#core-engineering">Core Engineering</a></div>
+      </div>
+      
+      <div class="foundation-item">
         <h3>Linux</h3>
         <p>Command-line skills and shell scripting for data pipeline operations.</p>
         <div class="next-step">Next step → <a href="#core-engineering">Core Engineering</a></div>
@@ -106,19 +112,19 @@ title: "Data Engineering Roadmap"
     <div class="path-grid">
       <div class="path-item">
         <h3>Beginner Path</h3>
-        <p>SQL → Python → Basic ETL → Simple BI</p>
+        <p>SQL → Python → PySpark → Basic ETL → Simple BI</p>
         <div class="time-estimate">3-6 months</div>
       </div>
       
       <div class="path-item">
         <h3>Analytics Engineer</h3>
-        <p>Advanced SQL → Data Modeling → dbt → BI Tools</p>
+        <p>Advanced SQL → Data Modeling → dbt → PySpark → BI Tools</p>
         <div class="time-estimate">6-12 months</div>
       </div>
       
       <div class="path-item">
         <h3>Data Platform Engineer</h3>
-        <p>Python → Orchestration → Cloud Architecture → DevOps</p>
+        <p>Python → PySpark → Orchestration → Cloud Architecture → DevOps</p>
         <div class="time-estimate">12-24 months</div>
       </div>
     </div>

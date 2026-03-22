@@ -14,6 +14,83 @@ title: "Home"
     <p class="page-subtitle">I build data systems that work, not systems that look good on slides.</p>
   </div>
 
+  <div class="text-center mb-4">
+    <h3>❌ Bad Advice → ✅ What Actually Works</h3>
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div style="background: var(--background-light); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; text-align: left;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">❌ "Use the latest tech stack"</h4>
+            <p style="margin-bottom: 0; font-size: 0.9rem;">Chasing trends, complex setups, vendor lock-in</p>
+          </div>
+          <div>
+            <h4 style="color: #27ae60; margin-bottom: 0.5rem;">✅ Use boring technology</h4>
+            <p style="margin-bottom: 0; font-size: 0.9rem;">PostgreSQL, Python, S3. Things that actually work.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="background: var(--background-light); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; text-align: left;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">❌ "Build perfect data models"</h4>
+            <p style="margin-bottom: 0; font-size: 0.9rem;">Months of modeling, over-engineered schemas</p>
+          </div>
+          <div>
+            <h4 style="color: #27ae60; margin-bottom: 0.5rem;">✅ Build good enough models</h4>
+            <p style="margin-bottom: 0; font-size: 0.9rem;">Start simple, evolve as needs change. Schema-on-read.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="background: var(--background-light); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; text-align: left;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">❌ "Real-time processing always"</h4>
+            <p style="margin-bottom: 0; font-size: 0.9rem;">Expensive, complex, often unnecessary</p>
+          </div>
+          <div>
+            <h4 style="color: #27ae60; margin-bottom: 0.5rem;">✅ Batch when you can</h4>
+            <p style="margin-bottom: 0; font-size: 0.9rem;">80% of use cases. Stream when you absolutely must.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="background: var(--background-light); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; text-align: left;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <div>
+            <h4 style="color: #e74c3c; margin-bottom: 0.5rem;">❌ "Microservices for everything"</h4>
+            <p style="margin-bottom: 0; font-size: 0.9rem;">Distributed complexity, operational overhead</p>
+          </div>
+          <div>
+            <h4 style="color: #27ae60; margin-bottom: 0.5rem;">✅ Start simple, break apart later</h4>
+            <p style="margin-bottom: 0; font-size: 0.9rem;">Monolith first. Split when you feel pain.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mb-4">
+    <h3>🎯 3 Things That Actually Work Right Now</h3>
+    <div style="max-width: 700px; margin: 0 auto;">
+      <div style="background: var(--background-secondary); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; text-align: left; border-left: 4px solid var(--primary-color);">
+        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">1. Start with CSV, not complex formats</h4>
+        <p style="margin-bottom: 0;">Ship faster, get feedback, optimize later. I've seen teams spend 3 months on a "perfect" Parquet pipeline when CSV would have solved the business problem in 3 days.</p>
+      </div>
+      
+      <div style="background: var(--background-secondary); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; text-align: left; border-left: 4px solid var(--primary-color);">
+        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">2. SQL first, Python second</h4>
+        <p style="margin-bottom: 0;">80% of data problems can be solved with SQL. It's faster, more maintainable, and your analysts can actually read it.</p>
+      </div>
+      
+      <div style="background: var(--background-secondary); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem; text-align: left; border-left: 4px solid var(--primary-color);">
+        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">3. Manual beats automated for first 3 months</h4>
+        <p style="margin-bottom: 0;">Understand the workflow before you automate. I've seen $500k automation projects for processes that took 2 hours per week.</p>
+      </div>
+    </div>
+  </div>
+
   <div class="text-center mb-3">
     <h3>What I Write About</h3>
     <div style="max-width: 600px; margin: 0 auto;">
@@ -28,37 +105,19 @@ title: "Home"
   </div>
 
   <div class="text-center mb-3">
-    <h3>Featured Ideas</h3>
-    <div style="max-width: 700px; margin: 0 auto;">
-      <div style="background: var(--background-light); padding: 2rem; border-radius: 8px; margin-bottom: 1rem; text-align: left;">
-        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Stop Overusing Spark</h4>
-        <p style="margin-bottom: 0;">80% of data workloads don't need distributed computing. You're probably over-engineering your solution.</p>
-      </div>
-      <div style="background: var(--background-light); padding: 2rem; border-radius: 8px; margin-bottom: 1rem; text-align: left;">
-        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Your Data Lake is Probably a Swamp</h4>
-        <p style="margin-bottom: 0;">Most data lakes become unmanageable messes without proper governance and architecture.</p>
-      </div>
-      <div style="background: var(--background-light); padding: 2rem; border-radius: 8px; text-align: left;">
-        <h4 style="color: var(--primary-color); margin-bottom: 0.5rem;">Batch > Real-Time (Most of the Time)</h4>
-        <p style="margin-bottom: 0;">Real-time processing is expensive and often unnecessary. Batch processing is usually the right answer.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="text-center mb-3">
     <h3>Explore</h3>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; max-width: 600px; margin: 0 auto;">
-      <a href="/blog/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        Blog Posts
+      <a href="{{ site.baseurl }}/tools/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        Tools Catalog
       </a>
-      <a href="/series/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        Content Series
+      <a href="{{ site.baseurl }}/roadmap/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        Learning Roadmap
       </a>
-      <a href="/projects/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        Projects
+      <a href="{{ site.baseurl }}/layers/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        Data Layers
       </a>
-      <a href="/about/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
-        About Me
+      <a href="{{ site.baseurl }}/cloud-tools/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+        Cloud Tools
       </a>
     </div>
   </div>
