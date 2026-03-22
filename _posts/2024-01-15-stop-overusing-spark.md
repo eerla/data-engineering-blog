@@ -6,11 +6,6 @@ categories: data-engineering
 tags: [spark, performance, optimization, system-design, BigQuery, GCP]
 ---
 
-<!-- PASTE YOUR MEDIUM CONTENT HERE -->
-
-
----
-
 
 If you're running a persistent Spark footprint on GCP for analytics and ELT, you should at least ask whether you still need it. In my experience as a lead data/platform engineer, for the majority of analytics-heavy workloads BigQuery is faster to operate, cheaper to run (once tuned), and dramatically simpler to own than self-managed Spark clusters. Treat Spark as an occasional specialist tool - not the default.
 
@@ -145,22 +140,22 @@ GPU-heavy or highly iterative algorithms with state that don't map cleanly to SQ
 Real-time stream processing with complex event-time state that requires Beam/Dataproc-level control - though Dataflow often covers these cases.
 
 ### Practical migration playbook
-Inventory: identify all Spark jobs and classify by type: ad-hoc, scheduled ELT, streaming, ML training.
-Prioritize: replace analytics + ELT first (biggest ROI). Leave complex streaming/ML last.
-Convert ETL -> ELT: reimplement transformations as BigQuery SQL + stored procedures. Use staging partitioned tables.
-Apply cost design: partition/cluster, create materialized views, add quotas.
-Replace streaming sinks with Dataflow -> BigQuery for stateful processing.
-Measure: compare latency, cost, failure rates, and developer velocity.
-Decommission Dataproc clusters gradually; keep a small sandbox for ad-hoc Spark jobs using BigQuery Storage API where needed.
+- Inventory: identify all Spark jobs and classify by type: ad-hoc, scheduled ELT, streaming, ML training.
+- Prioritize: replace analytics + ELT first (biggest ROI). Leave complex streaming/ML last.
+- Convert ETL -> ELT: reimplement transformations as BigQuery SQL + stored procedures. Use staging partitioned tables.
+- Apply cost design: partition/cluster, create materialized views, add quotas.
+- Replace streaming sinks with Dataflow -> BigQuery for stateful processing.
+- Measure: compare latency, cost, failure rates, and developer velocity.
+- Decommission Dataproc clusters gradually; keep a small sandbox for ad-hoc Spark jobs using BigQuery Storage API where needed.
 
 #### Engineering lessons (from real projects)
-SQL-first reduces the feedback loop. Analysts and engineers can iterate faster when transformations live in the warehouse.
-You only get BigQuery's economics after you redesign tables and queries for it. Naively copying Spark patterns into BigQuery wastes money.
-Treat cost-control as a product: visibility + automated gates prevent surprise bills.
-Interoperability is key. Don't pretend BigQuery replaces every tool - use Spark selectively via Storage API for niche needs.
+- SQL-first reduces the feedback loop. Analysts and engineers can iterate faster when transformations live in the warehouse.
+- You only get BigQuery's economics after you redesign tables and queries for it. Naively copying Spark patterns into BigQuery wastes money.
+- Treat cost-control as a product: visibility + automated gates prevent surprise bills.
+- Interoperability is key. Don't pretend BigQuery replaces every tool - use Spark selectively via Storage API for niche needs.
 
 BigQuery is not a silver bullet, but for GCP-hosted analytics and ELT it should be your default. It reduces operational overhead, accelerates delivery, and - with disciplined table design - keeps costs predictable. Keep Spark for specialized workloads, but move the majority of your analytics into BigQuery, adopt SQL-first engineering, and use Dataflow + Vertex AI for the parts BigQuery wasn't designed to own.
 
 ---
 
-If you're building data platforms, exploring analytics, or just love thinking about how data actually tells a story, feel free to follow me on linkedin. 
+If you're building data platforms, exploring analytics, or just love thinking about how data actually tells a story, connect with me on [linkedin](https://www.linkedin.com/in/guru-e/). 
