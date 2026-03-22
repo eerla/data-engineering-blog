@@ -98,7 +98,6 @@ title: "Data Processing"
         <div class="when-to-use">
           <strong>When to use:</strong> {{ tool.use_case }}
         </div>
-        </div>
       </div>
       {% endfor %}
     </div>
