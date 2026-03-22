@@ -2,13 +2,8 @@
 layout: post
 title: "I Dug Into Delta Lake's Transaction Log - This Is How ACID Actually Works on S3"
 date: 2026-03-22
-categories: data-engineering
 tags: [delta-lake, acid, s3, data-lake, transaction-log]
 ---
-
----
-
-# I Dug Into Delta Lake's Transaction Log - This Is How ACID Actually Works on S3
 
 I used to treat object stores like what they are: cheap, durable, and completely unreliable for transactional work. Great for dumping data. Terrible for updates, deletes, or anything resembling correctness.
 
