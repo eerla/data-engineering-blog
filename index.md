@@ -106,32 +106,32 @@ title: "Home"
 
   <div class="text-center mb-3">
     <h3>Explore</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; max-width: 800px; margin: 0 auto;">
-      <a href="{{ site.baseurl }}/tools/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 900px; margin: 0 auto;">
+      <a href="{{ site.baseurl }}/tools/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         🛠️ Tools Catalog
       </a>
-      <a href="{{ site.baseurl }}/cloud-tools/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      <a href="{{ site.baseurl }}/cloud-tools/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         ☁️ Cloud Tools
       </a>
-      <a href="{{ site.baseurl }}/roadmap/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      <a href="{{ site.baseurl }}/roadmap/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         🗺️ Learning Roadmap
       </a>
-      <a href="{{ site.baseurl }}/layers/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      <a href="{{ site.baseurl }}/layers/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         🏢 Data Layers
       </a>
-      <a href="{{ site.baseurl }}/comparisons/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      <a href="{{ site.baseurl }}/comparisons/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         ⚖️ Tool Comparisons
       </a>
-      <a href="{{ site.baseurl }}/blog/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      <a href="{{ site.baseurl }}/blog/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         📝 Blog Posts
       </a>
-      <a href="{{ site.baseurl }}/series/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      <a href="{{ site.baseurl }}/series/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         📚 Content Series
       </a>
-      <a href="{{ site.baseurl }}/projects/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      <a href="{{ site.baseurl }}/projects/" style="background: var(--primary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         🚀 Projects
       </a>
-      <a href="{{ site.baseurl }}/about/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600;">
+      <a href="{{ site.baseurl }}/about/" style="background: var(--secondary-color); color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         👤 About Me
       </a>
     </div>
