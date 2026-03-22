@@ -3235,9 +3235,387 @@ title: "Cloud Data Engineering Tools"
     </div>
   </section>
 
-  <section class="independent-section">
-    <h2 class="cloud-title">🌐 Independent & Multi-Cloud Tools</h2>
-    <p class="cloud-description">Cloud-agnostic solutions and multi-cloud platforms for maximum flexibility</p>
+  <section class="comparison-section">
+    <h2 class="cloud-title">🌐 Unified Cloud Data Engineering Tools Comparison</h2>
+    <p class="cloud-description">Direct comparison of equivalent data engineering tools across AWS, GCP, and Azure</p>
+    
+    <div class="comparison-categories">
+      <div class="category-section">
+        <h3>🧱 Compute Engines (Spark / Hadoop / Distributed Processing)</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Managed Spark / Hadoop</strong></td>
+                <td><strong>EMR</strong></td>
+                <td><strong>Dataproc</strong></td>
+                <td><strong>Azure Databricks</strong> / <strong>Synapse Spark</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Serverless SQL on Data Lake</strong></td>
+                <td>Athena</td>
+                <td>BigQuery</td>
+                <td>Synapse Serverless SQL</td>
+              </tr>
+              <tr>
+                <td><strong>General Batch Compute</strong></td>
+                <td>AWS Batch</td>
+                <td>Dataflow (batch)</td>
+                <td>Azure Batch</td>
+              </tr>
+              <tr>
+                <td><strong>Container Compute</strong></td>
+                <td>ECS / EKS</td>
+                <td>GKE</td>
+                <td>AKS</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>🔄 Streaming Ingestion & Processing</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Event Streaming (Kafka-like)</strong></td>
+                <td>MSK (Managed Kafka)</td>
+                <td>Pub/Sub</td>
+                <td>Event Hubs</td>
+              </tr>
+              <tr>
+                <td><strong>Streaming Ingestion</strong></td>
+                <td>Kinesis Data Streams</td>
+                <td>Pub/Sub</td>
+                <td>Event Hubs / IoT Hub</td>
+              </tr>
+              <tr>
+                <td><strong>Streaming ETL</strong></td>
+                <td>Kinesis Data Firehose</td>
+                <td>Dataflow (streaming)</td>
+                <td>Stream Analytics</td>
+              </tr>
+              <tr>
+                <td><strong>Streaming Compute Engine</strong></td>
+                <td>Kinesis Data Analytics (Flink)</td>
+                <td>Dataflow (Beam)</td>
+                <td>Stream Analytics / Databricks Structured Streaming</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>📥 Ingestion (Batch, CDC, File Transfer)</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Batch ETL / ELT</strong></td>
+                <td>Glue ETL</td>
+                <td>Data Fusion</td>
+                <td>Data Factory</td>
+              </tr>
+              <tr>
+                <td><strong>CDC / Database Migration</strong></td>
+                <td>DMS</td>
+                <td>Datastream</td>
+                <td>Azure DMS</td>
+              </tr>
+              <tr>
+                <td><strong>File Transfer</strong></td>
+                <td>DataSync / Transfer Family</td>
+                <td>Storage Transfer Service</td>
+                <td>Data Box / ADF Copy</td>
+              </tr>
+              <tr>
+                <td><strong>Event-driven ingestion</strong></td>
+                <td>Lambda</td>
+                <td>Cloud Functions</td>
+                <td>Azure Functions</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>🗄️ Storage (Lake, Warehouse, Table Formats)</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Object Storage (Data Lake)</strong></td>
+                <td>S3</td>
+                <td>GCS</td>
+                <td>ADLS Gen2</td>
+              </tr>
+              <tr>
+                <td><strong>Data Warehouse</strong></td>
+                <td>Redshift</td>
+                <td>BigQuery</td>
+                <td>Synapse SQL Pool</td>
+              </tr>
+              <tr>
+                <td><strong>Lakehouse Table Formats</strong></td>
+                <td>Iceberg / Hudi / Delta Lake</td>
+                <td>BigLake + Iceberg/Delta/Hudi</td>
+                <td>Delta Lake (native) / Iceberg / Hudi</td>
+              </tr>
+              <tr>
+                <td><strong>Metadata Catalog</strong></td>
+                <td>Glue Catalog</td>
+                <td>Dataplex / Data Catalog</td>
+                <td>Purview</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>🧮 Transformation & Modeling</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>SQL Transform Engine</strong></td>
+                <td>Redshift SQL / Athena</td>
+                <td>BigQuery SQL</td>
+                <td>Synapse SQL / Databricks SQL</td>
+              </tr>
+              <tr>
+                <td><strong>Spark Transform Engine</strong></td>
+                <td>EMR / Glue</td>
+                <td>Dataproc</td>
+                <td>Databricks / Synapse Spark</td>
+              </tr>
+              <tr>
+                <td><strong>Low-code Transform</strong></td>
+                <td>Glue DataBrew</td>
+                <td>DataPrep (Trifacta)</td>
+                <td>ADF Mapping Data Flows</td>
+              </tr>
+              <tr>
+                <td><strong>Data Modeling</strong></td>
+                <td>dbt</td>
+                <td>dbt</td>
+                <td>dbt</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>🧭 Orchestration & Workflow</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Managed Airflow</strong></td>
+                <td>MWAA</td>
+                <td>Cloud Composer</td>
+                <td>(No native Airflow)</td>
+              </tr>
+              <tr>
+                <td><strong>Serverless Orchestration</strong></td>
+                <td>Step Functions</td>
+                <td>Workflows</td>
+                <td>Logic Apps</td>
+              </tr>
+              <tr>
+                <td><strong>Scheduling</strong></td>
+                <td>CloudWatch Events</td>
+                <td>Cloud Scheduler</td>
+                <td>Azure Scheduler (legacy)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>🧪 Data Quality, Lineage, Observability</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Data Quality</strong></td>
+                <td>Glue Data Quality / Deequ</td>
+                <td>Dataplex Data Quality</td>
+                <td>Purview Data Quality</td>
+              </tr>
+              <tr>
+                <td><strong>Lineage</strong></td>
+                <td>Glue Lineage</td>
+                <td>Dataplex Lineage</td>
+                <td>Purview Lineage</td>
+              </tr>
+              <tr>
+                <td><strong>Monitoring</strong></td>
+                <td>CloudWatch</td>
+                <td>Cloud Monitoring</td>
+                <td>Azure Monitor</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>📊 BI, Analytics, ML Serving</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>BI Tools</strong></td>
+                <td>QuickSight</td>
+                <td>Looker / Looker Studio</td>
+                <td>Power BI</td>
+              </tr>
+              <tr>
+                <td><strong>ML Platform</strong></td>
+                <td>SageMaker</td>
+                <td>Vertex AI</td>
+                <td>Azure ML</td>
+              </tr>
+              <tr>
+                <td><strong>Feature Store</strong></td>
+                <td>SageMaker Feature Store</td>
+                <td>Vertex Feature Store</td>
+                <td>Azure ML Feature Store / Databricks Feature Store</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <div class="category-section">
+        <h3>⭐ Most Useful 1:1 Mappings (Quick Reference)</h3>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table highlight-mapping">
+            <thead>
+              <tr>
+                <th>AWS</th>
+                <th>GCP</th>
+                <th>Azure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>EMR</strong></td>
+                <td><strong>Dataproc</strong></td>
+                <td><strong>Azure Databricks / Synapse Spark</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Kinesis</strong></td>
+                <td><strong>Pub/Sub</strong></td>
+                <td><strong>Event Hubs</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Glue ETL</strong></td>
+                <td><strong>Dataflow / Data Fusion</strong></td>
+                <td><strong>Data Factory</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Redshift</strong></td>
+                <td><strong>BigQuery</strong></td>
+                <td><strong>Synapse SQL</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Athena</strong></td>
+                <td><strong>BigQuery (external tables)</strong></td>
+                <td><strong>Synapse Serverless SQL</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Glue Catalog</strong></td>
+                <td><strong>Dataplex / Data Catalog</strong></td>
+                <td><strong>Purview</strong></td>
+              </tr>
+              <tr>
+                <td><strong>Step Functions</strong></td>
+                <td><strong>Workflows</strong></td>
+                <td><strong>Logic Apps</strong></td>
+              </tr>
+              <tr>
+                <td><strong>QuickSight</strong></td>
+                <td><strong>Looker</strong></td>
+                <td><strong>Power BI</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
     
     <div class="tool-categories">
       <div class="category-section">

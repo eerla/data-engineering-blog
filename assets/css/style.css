@@ -623,11 +623,115 @@ pre code {
   padding-bottom: 1rem;
 }
 
-.cloud-tools {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+/* Cloud Tools Comparison Styles */
+.comparison-section {
+  margin-bottom: 4rem;
+}
+
+.comparison-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 2rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--background);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+}
+
+.comparison-table th {
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.comparison-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.comparison-table tr:nth-child(even) td {
+  background: var(--background-light);
+}
+
+.comparison-table tr:hover td {
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--primary-color);
+  width: 25%;
+  border-right: 1px solid var(--border-color);
+}
+
+.comparison-table td:not(:first-child) {
+  width: 25%;
+}
+
+.comparison-table.highlight-mapping td {
+  font-weight: 500;
+}
+
+.comparison-table.highlight-mapping strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* Responsive comparison tables */
+@media (max-width: 768px) {
+  .comparison-table {
+    font-size: 0.8rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .comparison-table td:first-child {
+    width: 35%;
+  }
+  
+  .comparison-table td:not(:first-child) {
+    width: 21.66%;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-table {
+    font-size: 0.7rem;
+  }
+  
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  .comparison-table td:first-child {
+    width: 40%;
+  }
+  
+  .comparison-table td:not(:first-child) {
+    width: 20%;
+  }
 }
 
 .sub-category {
