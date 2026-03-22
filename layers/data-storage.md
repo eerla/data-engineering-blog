@@ -116,3 +116,179 @@ title: "Data Storage"
     </div>
   </section>
 </div>
+
+<style>
+.type-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.type-card {
+  background: var(--background-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.type-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.type-card h4 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.type-card p {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.type-card .examples,
+.type-card .use-cases {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+.type-card .examples strong,
+.type-card .use-cases strong {
+  color: var(--primary-color);
+}
+
+.tools-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tool-item {
+  background: var(--background-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tool-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tool-item h4 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+}
+
+.tool-item h4 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.tool-item h4 a:hover {
+  text-decoration: underline;
+}
+
+.tool-item p {
+  margin: 0 0 1rem 0;
+  color: var(--text-secondary);
+}
+
+.tool-meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.type-badge, .category-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+}
+
+.type-badge {
+  background: var(--secondary-color);
+}
+
+.category-badge {
+  background: var(--primary-color);
+}
+
+.step-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.step-card {
+  background: var(--background-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.step-card h3 {
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+}
+
+.step-link {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.step-link:hover {
+  background: var(--secondary-color);
+}
+
+.step-link.primary {
+  background: var(--secondary-color);
+}
+
+.step-link.primary:hover {
+  background: var(--primary-color);
+}
+
+/* Fix for numbered headings with emojis */
+h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+/* Ensure proper spacing for content sections */
+.content-section {
+  margin: 2rem 0;
+}
+
+.problems-solved ul {
+  list-style: none;
+  padding: 0;
+}
+
+.problems-solved li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.problems-solved li:last-child {
+  border-bottom: none;
+}
+</style>
