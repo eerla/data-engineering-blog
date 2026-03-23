@@ -118,3 +118,7 @@ If a task:
 - or processes large in-memory data
 
 It does not belong in Airflow.
+
+---
+
+If you're building data platforms, exploring lakehouse architectures, or just curious about how modern data systems achieve reliability, connect with me on [LinkedIn](https://www.linkedin.com/in/guru-e/).
