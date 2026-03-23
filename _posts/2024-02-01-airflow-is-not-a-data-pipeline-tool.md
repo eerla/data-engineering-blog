@@ -17,7 +17,7 @@ The symptoms are consistent:
 This isn't a scaling issue. It's a boundary violation.
 
 ---
-![Airflow is not a compute engine](/assets/images/blog/airflow-is-not-compute.png)
+![Airflow is not a compute engine](/data-engineering-blog/assets/images/blog/airflow-is-not-compute.png)
 ## Airflow Is a Control Plane
 
 Airflow exists to:
