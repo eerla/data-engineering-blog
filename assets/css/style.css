@@ -1611,12 +1611,146 @@ pre code {
   margin-bottom: 0;
 }
 
-/* Roadmap and Tools Page Styles */
-.roadmap-section,
-.tools-filters,
-.tools-grid,
-.layer-summary {
-  margin-bottom: 3rem;
+/* Roadmap Section Styles */
+.roadmap-section {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.section-title {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-description {
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+/* Grid Layouts */
+.foundation-grid,
+.core-grid,
+.layers-grid,
+.path-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.foundation-item,
+.core-item,
+.layer-item,
+.path-item {
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.foundation-item:hover,
+.core-item:hover,
+.layer-item:hover,
+.path-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.foundation-item h3,
+.core-item h3,
+.layer-item h3,
+.path-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.foundation-item p,
+.core-item p,
+.layer-item p,
+.path-item p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+/* Next Step Navigation */
+.next-step {
+  font-size: 0.9rem;
+  color: var(--link-color);
+  margin-top: 1rem;
+}
+
+.next-step a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.next-step a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Tools CTA */
+.tools-cta {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+  background: var(--primary-light);
+  color: white;
+  text-decoration: none;
+}
+
+/* Time Estimate */
+.time-estimate {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--background);
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .foundation-grid,
+  .core-grid,
+  .layers-grid,
+  .path-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .roadmap-section {
+    padding: 1.5rem;
+  }
 }
 
 .foundation-grid,

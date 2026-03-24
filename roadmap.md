@@ -59,6 +59,112 @@ title: "Data Engineering Roadmap"
     </div>
   </section>
 
+  <section class="roadmap-section" id="ai-ml-engineering">
+    <h2 class="section-title">🤖 AI/ML Data Engineering</h2>
+    <p class="section-description">Optional: For engineers interested in ML infrastructure and pipelines</p>
+    
+    <div class="core-grid">
+      <div class="core-item">
+        <h3>Vector Databases</h3>
+        <p>Pinecone, Weaviate, Chroma - Storage for AI embeddings and semantic search.</p>
+        <div class="next-step">Next step → <a href="#real-time-streaming">Real-time Streaming</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>Feature Stores</h3>
+        <p>Feast, Tecton - Centralized feature management for ML models.</p>
+        <div class="next-step">Next step → <a href="#real-time-streaming">Real-time Streaming</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>ML Pipelines</h3>
+        <p>MLflow, Kubeflow, SageMaker - Orchestrate ML training and deployment.</p>
+        <div class="next-step">Next step → <a href="#real-time-streaming">Real-time Streaming</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>Model Serving</h3>
+        <p>BentoML, TorchServe, KServe - Deploy and serve ML models at scale.</p>
+        <div class="next-step">Next step → <a href="#real-time-streaming">Real-time Streaming</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="roadmap-section" id="real-time-streaming">
+    <h2 class="section-title">⚡ Real-time Streaming</h2>
+    <p class="section-description">Modern stream processing and real-time data systems</p>
+    
+    <div class="core-grid">
+      <div class="core-item">
+        <h3>Stream Processing</h3>
+        <p>Kafka, Flink, Pulsar - Real-time data processing and event streaming.</p>
+        <div class="next-step">Next step → <a href="#data-quality">Data Quality</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>Change Data Capture</h3>
+        <p>Debezium, Fivetran CDC - Capture database changes in real-time.</p>
+        <div class="next-step">Next step → <a href="#data-quality">Data Quality</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>Real-time Analytics</h3>
+        <p>Druid, Pinot, ClickHouse - Low-latency analytics on streaming data.</p>
+        <div class="next-step">Next step → <a href="#data-quality">Data Quality</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="roadmap-section" id="data-quality">
+    <h2 class="section-title">🔒 Data Quality & Governance</h2>
+    <p class="section-description">Essential practices for reliable data systems</p>
+    
+    <div class="core-grid">
+      <div class="core-item">
+        <h3>Data Observability</h3>
+        <p>Monte Carlo, Great Expectations - Monitor and ensure data quality.</p>
+        <div class="next-step">Next step → <a href="#cloud-economics">Cloud Economics</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>Data Contracts</h3>
+        <p>Define and enforce data schemas and quality standards.</p>
+        <div class="next-step">Next step → <a href="#cloud-economics">Cloud Economics</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>Privacy Engineering</h3>
+        <p>PII handling, GDPR compliance, and data privacy practices.</p>
+        <div class="next-step">Next step → <a href="#cloud-economics">Cloud Economics</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="roadmap-section" id="cloud-economics">
+    <h2 class="section-title">💰 Cloud Economics</h2>
+    <p class="section-description">Cost optimization and financial operations</p>
+    
+    <div class="core-grid">
+      <div class="core-item">
+        <h3>Cost Optimization</h3>
+        <p>Spot instances, autoscaling, resource efficiency strategies.</p>
+        <div class="next-step">Next step → <a href="#learning-paths">Learning Paths</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>Serverless Trade-offs</h3>
+        <p>When to use serverless vs managed services.</p>
+        <div class="next-step">Next step → <a href="#learning-paths">Learning Paths</a></div>
+      </div>
+      
+      <div class="core-item">
+        <h3>FinOps Basics</h3>
+        <p>Cost monitoring, budgeting, and financial accountability.</p>
+        <div class="next-step">Next step → <a href="#learning-paths">Learning Paths</a></div>
+      </div>
+    </div>
+  </section>
+
   <section class="roadmap-section" id="layers">
     <h2 class="section-title">🏢 Data Engineering Layers</h2>
     <p class="section-description">Understanding the complete data lifecycle</p>
@@ -105,27 +211,33 @@ title: "Data Engineering Roadmap"
     </div>
   </section>
 
-  <section class="roadmap-section">
+  <section class="roadmap-section" id="learning-paths">
     <h2 class="section-title">🎯 Learning Paths</h2>
     <p class="section-description">Common journeys and recommendations</p>
     
     <div class="path-grid">
       <div class="path-item">
         <h3>Beginner Path</h3>
-        <p>SQL → Python → PySpark → Basic ETL → Simple BI</p>
-        <div class="time-estimate">3-6 months</div>
+        <p>SQL → Python → Batch Processing (PySpark) → Basic ETL → Simple BI → Data Quality Basics → Streaming Fundamentals</p>
+        <div class="time-estimate">6-9 months</div>
       </div>
       
       <div class="path-item">
         <h3>Analytics Engineer</h3>
-        <p>Advanced SQL → Data Modeling → dbt → PySpark → BI Tools</p>
-        <div class="time-estimate">6-12 months</div>
+        <p>Advanced SQL → Data Modeling → Advanced Batch Processing (dbt) → Real-time Analytics → BI Tools → ML Data Prep</p>
+        <div class="time-estimate">9-15 months</div>
       </div>
       
       <div class="path-item">
         <h3>Data Platform Engineer</h3>
-        <p>Python → PySpark → Orchestration → Cloud Architecture → DevOps</p>
-        <div class="time-estimate">12-24 months</div>
+        <p>Python → Batch Architecture (Spark) → Streaming Architecture → Orchestration → Cloud Architecture → DevOps → ML Ops → Cost Optimization</p>
+        <div class="time-estimate">15-24 months</div>
+      </div>
+      
+      <div class="path-item">
+        <h3>ML Data Engineer</h3>
+        <p>SQL → Python → Batch Processing → Vector Databases → Feature Stores → ML Pipelines → Model Serving</p>
+        <div class="time-estimate">12-18 months</div>
       </div>
     </div>
   </section>

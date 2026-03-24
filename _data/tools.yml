@@ -1,5 +1,103 @@
 # Data Engineering Tools Catalog
 
+# AI/ML Data Engineering
+
+## Vector Databases
+- name: Pinecone
+  layer: Data Processing
+  category: Vector Database
+  type: Cloud Service
+  cloud: Multi-Cloud
+  use_case: AI embeddings, semantic search
+
+- name: Weaviate
+  layer: Data Processing
+  category: Vector Database
+  type: Open Source
+  cloud: Self-Hosted
+  use_case: Knowledge graphs, semantic search
+
+## Feature Stores
+- name: Feast
+  layer: Data Processing
+  category: Feature Store
+  type: Open Source
+  cloud: Self-Hosted
+  use_case: ML feature management
+
+## ML Pipelines
+- name: MLflow
+  layer: Data Processing
+  category: ML Platform
+  type: Open Source
+  cloud: Self-Hosted
+  use_case: ML experiment tracking
+
+- name: Kubeflow
+  layer: Data Processing
+  category: ML Platform
+  type: Open Source
+  cloud: Kubernetes
+  use_case: ML pipeline orchestration
+
+## Model Serving
+- name: BentoML
+  layer: Data Consumption
+  category: Model Serving
+  type: Open Source
+  cloud: Self-Hosted
+  use_case: ML model deployment
+
+# Real-time Streaming
+
+## Stream Processing
+- name: Apache Kafka
+  layer: Data Ingestion
+  category: Stream Processing
+  type: Distributed
+  cloud: Open Source
+  use_case: Event streaming, messaging
+
+- name: Apache Flink
+  layer: Data Processing
+  category: Stream Processing
+  type: Distributed
+  cloud: Open Source
+  use_case: Real-time analytics, low-latency
+
+## Change Data Capture
+- name: Debezium
+  layer: Data Ingestion
+  category: CDC
+  type: Open Source
+  cloud: Self-Hosted
+  use_case: Database change capture
+
+## Real-time Analytics
+- name: Apache Druid
+  layer: Data Storage
+  category: Real-time Analytics
+  type: Distributed
+  cloud: Open Source
+  use_case: Fast analytics on streaming data
+
+# Data Quality & Governance
+
+## Data Observability
+- name: Monte Carlo
+  layer: Data Processing
+  category: Data Observability
+  type: Cloud Service
+  cloud: Multi-Cloud
+  use_case: Data quality monitoring
+
+- name: Great Expectations
+  layer: Data Processing
+  category: Data Testing
+  type: Open Source
+  cloud: Self-Hosted
+  use_case: Data validation, testing
+
 # Cloud Providers
 
 ## AWS
