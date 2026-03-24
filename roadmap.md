@@ -109,6 +109,32 @@ title: "Data Engineering Roadmap"
         { name: "Pipes & Redirection", description: "|, >, >>, <, 2>&1 concepts" },
         { name: "System Monitoring", description: "df, du, free, uptime, netstat" }
       ]
+    },
+    "data-modeling": {
+      title: "Data Modeling - Top 20% Concepts (80% Coverage)",
+      concepts: [
+        { name: "Entity Relationship Diagrams", description: "ERD design, entities, relationships, cardinality" },
+        { name: "Normalization", description: "1NF, 2NF, 3NF, BCNF - reducing data redundancy" },
+        { name: "Primary & Foreign Keys", description: "Unique identifiers and referential integrity" },
+        { name: "Data Types & Constraints", description: "Choosing appropriate types, NOT NULL, CHECK constraints" },
+        { name: "Star Schema", description: "Fact tables, dimension tables for data warehousing" },
+        { name: "Snowflake Schema", description: "Normalized dimension tables, hierarchical relationships" },
+        { name: "Data Vault Modeling", description: "Hub, link, satellite tables for audit trails" },
+        { name: "Dimensional Modeling", description: "Conformed dimensions, slowly changing dimensions" }
+      ]
+    },
+    "etl-elt": {
+      title: "ETL/ELT - Top 20% Concepts (80% Coverage)",
+      concepts: [
+        { name: "Extract Patterns", description: "Full extraction, incremental CDC, change data capture" },
+        { name: "Transform Logic", description: "Data cleansing, validation, business rules application" },
+        { name: "Load Strategies", description: "Batch loading, streaming loads, upsert operations" },
+        { name: "ETL vs ELT", description: "Traditional ETL vs modern ELT approaches" },
+        { name: "Data Pipeline Architecture", description: "Source to target, staging areas, data quality checks" },
+        { name: "Orchestration", description: "Workflow scheduling, dependency management, error handling" },
+        { name: "Data Quality", description: "Profiling, validation, monitoring, alerting" },
+        { name: "Performance Optimization", description: "Parallel processing, partitioning, indexing strategies" }
+      ]
     }
   };
 
@@ -156,15 +182,17 @@ title: "Data Engineering Roadmap"
     <p class="section-description">Essential concepts and tools for data professionals</p>
     
     <div class="core-grid">
-      <div class="core-item">
+      <div class="core-item" onclick="showConcepts('data-modeling')">
         <h3>Data Modeling</h3>
         <p>Designing schemas, relationships, and data architectures.</p>
+        <div class="click-hint">💡 Click to see core concepts</div>
         <div class="next-step">Next step → <a href="#layers">Data Layers</a></div>
       </div>
       
-      <div class="core-item">
+      <div class="core-item" onclick="showConcepts('etl-elt')">
         <h3>ETL / ELT</h3>
         <p>Extract, Transform, Load patterns and modern data pipelines.</p>
+        <div class="click-hint">💡 Click to see core concepts</div>
         <div class="next-step">Next step → <a href="#layers">Data Layers</a></div>
       </div>
     </div>

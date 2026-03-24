@@ -1612,7 +1612,8 @@ pre code {
 }
 
 /* Interactive Foundation Items */
-.foundation-item {
+.foundation-item,
+.core-item {
   background: var(--background-light);
   padding: 2rem;
   border-radius: 8px;
@@ -1622,7 +1623,8 @@ pre code {
   position: relative;
 }
 
-.foundation-item:hover {
+.foundation-item:hover,
+.core-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   border-color: var(--primary-color);
