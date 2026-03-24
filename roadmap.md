@@ -14,31 +14,142 @@ title: "Data Engineering Roadmap"
     <p class="section-description">Start here if you're new to data engineering</p>
     
     <div class="foundation-grid">
-      <div class="foundation-item">
+      <div class="foundation-item" onclick="showConcepts('sql')">
         <h3>SQL</h3>
         <p>The language of data. Master SELECT, JOIN, GROUP BY, and window functions.</p>
+        <div class="click-hint">💡 Click to see core concepts</div>
         <div class="next-step">Next step → <a href="#core-engineering">Core Engineering</a></div>
       </div>
       
-      <div class="foundation-item">
+      <div class="foundation-item" onclick="showConcepts('python')">
         <h3>Python</h3>
         <p>Essential for data manipulation, automation, and modern data tools.</p>
+        <div class="click-hint">💡 Click to see core concepts</div>
         <div class="next-step">Next step → <a href="#core-engineering">Core Engineering</a></div>
       </div>
       
-      <div class="foundation-item">
+      <div class="foundation-item" onclick="showConcepts('pyspark')">
         <h3>Apache Spark (PySpark)</h3>
         <p>Big data processing framework for distributed computing and large-scale data analysis.</p>
+        <div class="click-hint">💡 Click to see core concepts</div>
         <div class="next-step">Next step → <a href="#core-engineering">Core Engineering</a></div>
       </div>
       
-      <div class="foundation-item">
+      <div class="foundation-item" onclick="showConcepts('linux')">
         <h3>Linux</h3>
         <p>Command-line skills and shell scripting for data pipeline operations.</p>
+        <div class="click-hint">💡 Click to see core concepts</div>
         <div class="next-step">Next step → <a href="#core-engineering">Core Engineering</a></div>
       </div>
     </div>
   </section>
+
+  <!-- Core Concepts Modal -->
+  <div id="concepts-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeConcepts()">&times;</span>
+      <h2 id="modal-title">Core Concepts</h2>
+      <div id="modal-body">
+        <!-- Concepts will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Core Concepts Data
+  const coreConcepts = {
+    sql: {
+      title: "SQL - Top 20% Concepts (80% Coverage)",
+      concepts: [
+        { name: "Basic Queries", description: "SELECT, FROM, WHERE, ORDER BY, LIMIT" },
+        { name: "Aggregations", description: "COUNT, SUM, AVG, MAX, MIN with GROUP BY" },
+        { name: "Joins", description: "INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN" },
+        { name: "Subqueries", description: "Nested queries and correlated subqueries" },
+        { name: "CTEs", description: "Common Table Expressions (WITH clauses)" },
+        { name: "Window Functions", description: "ROW_NUMBER(), RANK(), LAG(), LEAD()" },
+        { name: "Data Types", description: "VARCHAR, INT, DATE, TIMESTAMP, BOOLEAN" },
+        { name: "Indexes", description: "Primary keys, foreign keys, and performance indexes" }
+      ]
+    },
+    python: {
+      title: "Python - Top 20% Concepts (80% Coverage)",
+      concepts: [
+        { name: "Data Structures", description: "Lists, dictionaries, tuples, sets, and their methods" },
+        { name: "List Comprehensions", description: "[x for x in iterable if condition] patterns" },
+        { name: "Functions", description: "def, return, parameters, *args, **kwargs" },
+        { name: "Lambda Functions", description: "Anonymous functions for quick operations" },
+        { name: "Pandas Basics", description: "read_csv(), DataFrame, select, filter, groupby" },
+        { name: "File Operations", description: "open(), read(), write(), with statements" },
+        { name: "Error Handling", description: "try, except, finally, raise exceptions" },
+        { name: "Modules & Imports", description: "import, from, pip, virtual environments" }
+      ]
+    },
+    pyspark: {
+      title: "PySpark - Top 20% Concepts (80% Coverage)",
+      concepts: [
+        { name: "SparkSession", description: "Creating and configuring Spark sessions" },
+        { name: "DataFrame Basics", description: "Creating, reading, and basic operations" },
+        { name: "Transformations", description: "select(), filter(), withColumn(), drop()" },
+        { name: "Actions", description: "show(), collect(), count(), take(), first()" },
+        { name: "Aggregations", description: "groupBy(), agg(), sum(), count(), avg()" },
+        { name: "Joins", description: "Inner, left, right joins between DataFrames" },
+        { name: "File Formats", description: "CSV, JSON, Parquet, ORC read/write operations" },
+        { name: "Lazy Evaluation", description: "Understanding transformations vs actions" }
+      ]
+    },
+    linux: {
+      title: "Linux - Top 20% Concepts (80% Coverage)",
+      concepts: [
+        { name: "File Navigation", description: "ls, cd, pwd, find, locate commands" },
+        { name: "File Operations", description: "cp, mv, rm, mkdir, touch, chmod" },
+        { name: "Text Processing", description: "grep, sed, awk, sort, uniq, wc" },
+        { name: "Process Management", description: "ps, top, kill, killall, jobs, bg, fg" },
+        { name: "Permissions", description: "chmod, chown, chgrp, umask concepts" },
+        { name: "Shell Scripting", description: "Variables, loops, conditionals, functions" },
+        { name: "Pipes & Redirection", description: "|, >, >>, <, 2>&1 concepts" },
+        { name: "System Monitoring", description: "df, du, free, uptime, netstat" }
+      ]
+    }
+  };
+
+  function showConcepts(topic) {
+    const modal = document.getElementById('concepts-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalBody = document.getElementById('modal-body');
+    
+    const data = coreConcepts[topic];
+    modalTitle.textContent = data.title;
+    
+    let conceptsHTML = '<div class="concepts-grid">';
+    data.concepts.forEach((concept, index) => {
+      conceptsHTML += `
+        <div class="concept-item">
+          <div class="concept-number">${index + 1}</div>
+          <div class="concept-content">
+            <h4>${concept.name}</h4>
+            <p>${concept.description}</p>
+          </div>
+        </div>
+      `;
+    });
+    conceptsHTML += '</div>';
+    
+    modalBody.innerHTML = conceptsHTML;
+    modal.style.display = 'block';
+  }
+
+  function closeConcepts() {
+    document.getElementById('concepts-modal').style.display = 'none';
+  }
+
+  // Close modal when clicking outside
+  window.onclick = function(event) {
+    const modal = document.getElementById('concepts-modal');
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  }
+  </script>
 
   <section class="roadmap-section" id="core-engineering">
     <h2 class="section-title">⚙️ Core Data Engineering</h2>
