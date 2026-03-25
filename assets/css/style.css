@@ -1776,6 +1776,410 @@ pre code {
   }
 }
 
+/* Database Guide Styles */
+.database-section {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+/* Database Selection Tool */
+.selection-tool {
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 1rem;
+}
+
+.filter-section {
+  margin-bottom: 2rem;
+}
+
+.filter-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-option:hover {
+  border-color: var(--primary-color);
+  background: var(--background-light);
+}
+
+.filter-option input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.filter-option input[type="radio"]:checked + span {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Category Grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.category-card {
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-color: var(--primary-color);
+}
+
+.category-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.category-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.feature-tag {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.category-examples {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Database Grid */
+.database-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.database-card {
+  background: var(--background-light);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.database-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.db-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--background);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.db-header h3,
+.db-header h4 {
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.db-type {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.db-type.open-source {
+  background: #28a745;
+  color: white;
+}
+
+.db-type.commercial {
+  background: #007bff;
+  color: white;
+}
+
+.db-type.managed {
+  background: #6f42c1;
+  color: white;
+}
+
+.db-content {
+  padding: 1.5rem;
+}
+
+.db-description {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.db-features {
+  margin-bottom: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.feature-icon {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.db-use-cases h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.db-use-cases ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.db-use-cases li {
+  margin-bottom: 0.25rem;
+}
+
+/* NoSQL Types */
+.nosql-types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.nosql-category h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.nosql-category .database-card {
+  margin-bottom: 0;
+}
+
+/* Comparison Tables */
+.comparison-table {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.database-comparison {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--background-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.database-comparison th,
+.database-comparison td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.database-comparison th {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.database-comparison tr:last-child td {
+  border-bottom: none;
+}
+
+.database-comparison td strong {
+  color: var(--text-color);
+}
+
+/* Selection Matrix */
+.selection-matrix {
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--background-light);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.matrix-table th,
+.matrix-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.matrix-table th {
+  background: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+.matrix-table tr:last-child td {
+  border-bottom: none;
+}
+
+.matrix-table td:first-child {
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+/* Category Detail Modal */
+.category-detail h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.category-detail ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.category-detail li {
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+.category-detail strong {
+  color: var(--text-color);
+}
+
+.use-cases {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.use-case {
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.use-case h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.use-case p {
+  color: var(--text-light);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.nosql-types-detail {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.nosql-type {
+  background: var(--background);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.nosql-type h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.nosql-type p {
+  color: var(--text-light);
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+/* Database Guide Responsive Design */
+@media (max-width: 768px) {
+  .category-grid,
+  .database-grid,
+  .nosql-types {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .filter-options {
+    flex-direction: column;
+  }
+  
+  .database-comparison,
+  .matrix-table {
+    font-size: 0.9rem;
+  }
+  
+  .database-comparison th,
+  .database-comparison td,
+  .matrix-table th,
+  .matrix-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .db-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
 .section-title {
   color: var(--primary-color);
   margin-bottom: 1rem;
