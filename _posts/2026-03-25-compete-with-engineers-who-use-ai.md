@@ -7,7 +7,7 @@ tags: [ai, cursor, engineering, productivity, tools]
 
 I'm not saying this after a weekend of trying AI tools. I'm saying this after 2 years of using Cursor consistently - while working a demanding full-time job. And I'll be direct: The way most engineers are still writing code today is already outdated.
 
-![AI Engineering Workflow]({{ site.baseurl }}/assets/images/useai.png)
+![AI Engineering Workflow]({{ site.baseurl }}/assets/images/useai.png){: .center-image }
 
 ---
 
