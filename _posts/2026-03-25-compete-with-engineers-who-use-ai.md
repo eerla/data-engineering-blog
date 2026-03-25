@@ -2,6 +2,7 @@
 layout: post
 title: "You're Not Competing with AI - You're Competing with Engineers Who Use It"
 date: 2026-03-25
+categories: ai-engineering
 tags: [ai, cursor, engineering, productivity, tools]
 ---
 
