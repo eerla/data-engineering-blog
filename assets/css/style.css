@@ -2251,35 +2251,8 @@ pre code {
 
 .rec-reason {
   color: var(--text-light);
-  margin-bottom: 1rem;
+  margin-bottom: 0;
   line-height: 1.6;
-}
-
-.rec-priority {
-  text-align: center;
-}
-
-.priority-badge {
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  display: inline-block;
-}
-
-.priority-1 {
-  background: #28a745;
-  color: white;
-}
-
-.priority-2 {
-  background: #ffc107;
-  color: #212529;
-}
-
-.priority-3 {
-  background: #6c757d;
-  color: white;
 }
 
 .section-title {

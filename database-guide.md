@@ -779,7 +779,7 @@ function filterDatabases() {
   
   if (results.length > 0) {
     let resultsHTML = '<div class="recommendation-grid">';
-    results.forEach((db, index) => {
+    results.forEach((db) => {
       resultsHTML += `
         <div class="recommendation-card">
           <div class="rec-header">
@@ -787,9 +787,6 @@ function filterDatabases() {
             <span class="rec-type">${db.type}</span>
           </div>
           <p class="rec-reason">${db.reason}</p>
-          <div class="rec-priority">
-            <span class="priority-badge priority-${index + 1}">#${index + 1} Recommendation</span>
-          </div>
         </div>
       `;
     });
