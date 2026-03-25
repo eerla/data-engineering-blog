@@ -10,6 +10,16 @@ title: "Series"
 
 <div class="container">
   <div class="series-section">
+    <h2 class="series-title">AI Engineering</h2>
+    <p style="color: var(--text-light); margin-bottom: 2rem;">Practical insights on leveraging AI in engineering workflows.</p>
+    <ul class="series-list">
+      <li class="series-item">
+        <a href="{{ site.baseurl }}/blog/2026/03/25/compete-with-engineers-who-use-ai/">You're Not Competing with AI - You're Competing with Engineers Who Use It</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="series-section">
     <h2 class="series-title">Data Engineering Myths</h2>
     <p style="color: var(--text-light); margin-bottom: 2rem;">Common misconceptions that cost companies time and money.</p>
     <ul class="series-list">
