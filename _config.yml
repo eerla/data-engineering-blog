@@ -91,6 +91,8 @@ navigation:
     url: ""
   - title: "Roadmap"
     url: "/roadmap/"
+  - title: "Database Guide"
+    url: "/database-guide/"
   - title: "Layers"
     url: "/layers/"
   - title: "Cloud Tools"
