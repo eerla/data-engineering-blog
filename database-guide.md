@@ -58,6 +58,14 @@ title: "Database Landscape Guide"
           </label>
         </div>
       </div>
+      
+      <!-- Results Section -->
+      <div id="selection-results" class="selection-results" style="display: none;">
+        <h3>Recommended Databases</h3>
+        <div id="results-content">
+          <!-- Results will be populated here -->
+        </div>
+      </div>
     </div>
   </section>
 
@@ -677,13 +685,120 @@ function closeDbModal() {
 }
 
 function filterDatabases() {
-  // This would filter the database recommendations based on user selections
   const useCase = document.querySelector('input[name="use-case"]:checked')?.value;
   const scale = document.querySelector('input[name="scale"]:checked')?.value;
+  const resultsDiv = document.getElementById('selection-results');
+  const resultsContent = document.getElementById('results-content');
   
-  if (useCase && scale) {
-    console.log(`Filtering databases for use-case: ${useCase}, scale: ${scale}`);
-    // Implementation would go here to show filtered results
+  if (!useCase || !scale) {
+    resultsDiv.style.display = 'none';
+    return;
+  }
+  
+  // Database recommendations based on use case and scale
+  const recommendations = {
+    'transactions-small': [
+      { name: 'PostgreSQL', reason: 'Reliable, feature-rich, perfect for small applications', type: 'SQL' },
+      { name: 'MySQL', reason: 'Fast, easy to setup, great for web apps', type: 'SQL' },
+      { name: 'SQLite', reason: 'File-based, zero configuration, embedded use', type: 'SQL' }
+    ],
+    'transactions-medium': [
+      { name: 'PostgreSQL', reason: 'Handles medium scale well, advanced features', type: 'SQL' },
+      { name: 'MySQL', reason: 'Proven performance at medium scale', type: 'SQL' },
+      { name: 'MongoDB', reason: 'Flexible schema, good for growing applications', type: 'NoSQL' }
+    ],
+    'transactions-large': [
+      { name: 'PostgreSQL', reason: 'Enterprise features, high availability', type: 'SQL' },
+      { name: 'Cassandra', reason: 'High write throughput, horizontal scaling', type: 'NoSQL' },
+      { name: 'CockroachDB', reason: 'Distributed SQL, global scale', type: 'NewSQL' }
+    ],
+    'analytics-small': [
+      { name: 'PostgreSQL', reason: 'Window functions, good for small analytics', type: 'SQL' },
+      { name: 'DuckDB', reason: 'Fast analytical queries, embedded', type: 'OLAP' },
+      { name: 'SQLite', reason: 'Simple analytics on small datasets', type: 'SQL' }
+    ],
+    'analytics-medium': [
+      { name: 'ClickHouse', reason: 'Columnar storage, fast analytics', type: 'OLAP' },
+      { name: 'PostgreSQL', reason: 'Good analytical capabilities', type: 'SQL' },
+      { name: 'BigQuery', reason: 'Serverless, pay-per-query', type: 'OLAP' }
+    ],
+    'analytics-large': [
+      { name: 'Snowflake', reason: 'Cloud-native, excellent performance', type: 'OLAP' },
+      { name: 'BigQuery', reason: 'Serverless, massive scale', type: 'OLAP' },
+      { name: 'Redshift', reason: 'AWS integration, proven at scale', type: 'OLAP' }
+    ],
+    'real-time-small': [
+      { name: 'Redis', reason: 'In-memory, microsecond latency', type: 'Key-Value' },
+      { name: 'PostgreSQL', reason: 'Good for real-time with proper indexing', type: 'SQL' },
+      { name: 'SQLite', reason: 'Simple real-time applications', type: 'SQL' }
+    ],
+    'real-time-medium': [
+      { name: 'Redis', reason: 'Excellent performance, clustering support', type: 'Key-Value' },
+      { name: 'MongoDB', reason: 'Good real-time performance, flexible', type: 'NoSQL' },
+      { name: 'PostgreSQL', reason: 'Real-time with LISTEN/NOTIFY', type: 'SQL' }
+    ],
+    'real-time-large': [
+      { name: 'Kafka + RocksDB', reason: 'Streaming + persistent storage', type: 'Hybrid' },
+      { name: 'ScyllaDB', reason: 'Cassandra-compatible, low latency', type: 'NoSQL' },
+      { name: 'Redis Cluster', reason: 'Distributed in-memory, high performance', type: 'Key-Value' }
+    ],
+    'ai-ml-small': [
+      { name: 'PostgreSQL', reason: 'pgvector extension, good for small ML', type: 'SQL' },
+      { name: 'Chroma', reason: 'Lightweight vector database', type: 'Vector' },
+      { name: 'SQLite', reason: 'Simple ML workloads, embedded', type: 'SQL' }
+    ],
+    'ai-ml-medium': [
+      { name: 'Pinecone', reason: 'Managed vector database, easy to use', type: 'Vector' },
+      { name: 'Weaviate', reason: 'Knowledge graphs, semantic search', type: 'Vector' },
+      { name: 'PostgreSQL + pgvector', reason: 'Cost-effective vector operations', type: 'SQL' }
+    ],
+    'ai-ml-large': [
+      { name: 'Pinecone', reason: 'Enterprise vector database at scale', type: 'Vector' },
+      { name: 'Weaviate', reason: 'Scalable knowledge graphs', type: 'Vector' },
+      { name: 'Milvus', reason: 'Open source, large scale vector search', type: 'Vector' }
+    ],
+    'content-small': [
+      { name: 'PostgreSQL', reason: 'JSON support, structured content', type: 'SQL' },
+      { name: 'MongoDB', reason: 'Document-oriented, flexible content', type: 'NoSQL' },
+      { name: 'SQLite', reason: 'Simple content management', type: 'SQL' }
+    ],
+    'content-medium': [
+      { name: 'MongoDB', reason: 'Flexible schemas, content management', type: 'NoSQL' },
+      { name: 'PostgreSQL', reason: 'JSONB, full-text search', type: 'SQL' },
+      { name: 'Elasticsearch', reason: 'Full-text search, content indexing', type: 'Search' }
+    ],
+    'content-large': [
+      { name: 'MongoDB', reason: 'Scales well, content management', type: 'NoSQL' },
+      { name: 'Elasticsearch', reason: 'Powerful search at scale', type: 'Search' },
+      { name: 'PostgreSQL', reason: 'Reliable, can handle large content', type: 'SQL' }
+    ]
+  };
+  
+  const key = `${useCase}-${scale}`;
+  const results = recommendations[key] || [];
+  
+  if (results.length > 0) {
+    let resultsHTML = '<div class="recommendation-grid">';
+    results.forEach((db, index) => {
+      resultsHTML += `
+        <div class="recommendation-card">
+          <div class="rec-header">
+            <h4>${db.name}</h4>
+            <span class="rec-type">${db.type}</span>
+          </div>
+          <p class="rec-reason">${db.reason}</p>
+          <div class="rec-priority">
+            <span class="priority-badge priority-${index + 1}">#${index + 1} Recommendation</span>
+          </div>
+        </div>
+      `;
+    });
+    resultsHTML += '</div>';
+    
+    resultsContent.innerHTML = resultsHTML;
+    resultsDiv.style.display = 'block';
+  } else {
+    resultsDiv.style.display = 'none';
   }
 }
 
