@@ -402,9 +402,8 @@ title: "Database Landscape Guide"
       </div>
       
       <div class="database-card">
-        <div class="db-header">
-          <h3>Weaviate</h3>
-          <span class="db-type open-source">Open Source</span>
+        <div class="skill-resources">
+          <a href="{{ site.baseurl }}/tools/" class="skill-link">Explore Tools</a>
         </div>
         <div class="db-content">
           <p class="db-description">Open-source vector database with knowledge graph capabilities</p>

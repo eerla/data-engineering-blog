@@ -4,8 +4,8 @@ title: "Data Engineering Tools"
 ---
 
 <div class="page-header">
-  <h1 class="page-title">Data Engineering Tools</h1>
-  <p class="page-subtitle">Find the right tools for your data engineering needs</p>
+  <h1 class="page-title">Comprehensive Data Engineering Tools</h1>
+  <p class="page-subtitle">Find right tools for your data engineering needs - cloud providers, comparisons, and decision guides</p>
 </div>
 
 <div class="container">
@@ -27,6 +27,15 @@ title: "Data Engineering Tools"
         <option value="streaming">Streaming</option>
         <option value="bi">Business Intelligence</option>
         <option value="cloud-service">Cloud Service</option>
+      </select>
+      
+      <select id="cloud-filter" class="filter-select">
+        <option value="all">All Clouds</option>
+        <option value="aws">Amazon Web Services</option>
+        <option value="gcp">Google Cloud Platform</option>
+        <option value="azure">Microsoft Azure</option>
+        <option value="multi-cloud">Multi-Cloud</option>
+        <option value="open-source">Open Source</option>
       </select>
     </div>
   </section>
@@ -157,6 +166,308 @@ title: "Data Engineering Tools"
           </div>
           {% endfor %}
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tool Comparisons Section -->
+  <section class="comparisons-section">
+    <h2>🔄 Tool Comparisons</h2>
+    
+    <!-- Orchestration Comparison -->
+    <div class="comparison-section">
+      <h3>Workflow Orchestration</h3>
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="tool-col">Tool</div>
+          <div class="feature-col">Best For</div>
+          <div class="feature-col">Key Feature</div>
+          <div class="feature-col">Learning Curve</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Airflow</strong>
+            <span class="badge mature">Mature</span>
+          </div>
+          <div class="feature-col">Batch ETL, established teams</div>
+          <div class="feature-col">Large community, extensive integrations</div>
+          <div class="feature-col">Medium</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Prefect</strong>
+            <span class="badge modern">Modern</span>
+          </div>
+          <div class="feature-col">Python-native workflows</div>
+          <div class="feature-col">Dynamic scaling, modern UI</div>
+          <div class="feature-col">Low-Medium</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Dagster</strong>
+            <span class="badge data-aware">Data-aware</span>
+          </div>
+          <div class="feature-col">Asset governance, lineage</div>
+          <div class="feature-col">Data assets, software-defined assets</div>
+          <div class="feature-col">Medium-High</div>
+        </div>
+      </div>
+      
+      <div class="recommendation">
+        <h4>Quick Recommendation:</h4>
+        <ul>
+          <li><strong>Choose Airflow</strong> for established ETL workflows and large teams</li>
+          <li><strong>Choose Prefect</strong> for Python-first development and modern workflows</li>
+          <li><strong>Choose Dagster</strong> for complex data pipelines needing governance</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Data Warehouse Comparison -->
+    <div class="comparison-section">
+      <h3>📊 Data Warehouses</h3>
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="tool-col">Tool</div>
+          <div class="feature-col">Best For</div>
+          <div class="feature-col">Key Feature</div>
+          <div class="feature-col">Cost Model</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Snowflake</strong>
+            <span class="badge multi-cloud">Multi-cloud</span>
+          </div>
+          <div class="feature-col">Enterprise analytics, multi-cloud</div>
+          <div class="feature-col">Automatic scaling, data sharing</div>
+          <div class="feature-col">Pay-per-use (credits)</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>BigQuery</strong>
+            <span class="badge serverless">Serverless</span>
+          </div>
+          <div class="feature-col">Large-scale analytics, ML</div>
+          <div class="feature-col">Serverless, ML integration</div>
+          <div class="feature-col">Pay-per-query + storage</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Redshift</strong>
+            <span class="badge aws">AWS Native</span>
+          </div>
+          <div class="feature-col">AWS ecosystem, petabyte-scale</div>
+          <div class="feature-col">AWS integration, concurrency scaling</div>
+          <div class="feature-col">Node-based + on-demand</div>
+        </div>
+      </div>
+      
+      <div class="recommendation">
+        <h4>Quick Recommendation:</h4>
+        <ul>
+          <li><strong>Choose Snowflake</strong> for multi-cloud strategy and enterprise features</li>
+          <li><strong>Choose BigQuery</strong> for serverless operations and Google ecosystem</li>
+          <li><strong>Choose Redshift</strong> for AWS-native workloads and cost control</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Streaming Comparison -->
+    <div class="comparison-section">
+      <h3>⚡ Streaming Platforms</h3>
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="tool-col">Tool</div>
+          <div class="feature-col">Best For</div>
+          <div class="feature-col">Key Feature</div>
+          <div class="feature-col">Complexity</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Kafka</strong>
+            <span class="badge standard">Industry Standard</span>
+          </div>
+          <div class="feature-col">High-throughput event streaming</div>
+          <div class="feature-col">Distributed log, durability</div>
+          <div class="feature-col">High</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Kinesis</strong>
+            <span class="badge aws">AWS Managed</span>
+          </div>
+          <div class="feature-col">AWS ecosystem, managed service</div>
+          <div class="feature-col">Fully managed, AWS integration</div>
+          <div class="feature-col">Medium</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Pulsar</strong>
+            <span class="badge flexible">Flexible</span>
+          </div>
+          <div class="feature-col">Multi-tenancy, geo-replication</div>
+          <div class="feature-col">Tiered storage, unified messaging</div>
+          <div class="feature-col">High</div>
+        </div>
+      </div>
+      
+      <div class="recommendation">
+        <h4>Quick Recommendation:</h4>
+        <ul>
+          <li><strong>Choose Kafka</strong> for maximum control and ecosystem compatibility</li>
+          <li><strong>Choose Kinesis</strong> for AWS-native managed streaming</li>
+          <li><strong>Choose Pulsar</strong> for advanced features and multi-tenancy</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BI Tools Comparison -->
+    <div class="comparison-section">
+      <h3>📈 Business Intelligence Tools</h3>
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="tool-col">Tool</div>
+          <div class="feature-col">Best For</div>
+          <div class="feature-col">Key Feature</div>
+          <div class="feature-col">Cost</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Tableau</strong>
+            <span class="badge enterprise">Enterprise</span>
+          </div>
+          <div class="feature-col">Visual analytics, enterprise</div>
+          <div class="feature-col">Advanced visualizations</div>
+          <div class="feature-col">High</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Power BI</strong>
+            <span class="badge microsoft">Microsoft</span>
+          </div>
+          <div class="feature-col">Microsoft ecosystem, enterprise</div>
+          <div class="feature-col">Office 365 integration</div>
+          <div class="feature-col">Medium-High</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Looker</strong>
+            <span class="badge embedded">Embedded</span>
+          </div>
+          <div class="feature-col">Embedded analytics, modeling</div>
+          <div class="feature-col">LookML modeling layer</div>
+          <div class="feature-col">High</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Metabase</strong>
+            <span class="badge open-source">Open Source</span>
+          </div>
+          <div class="feature-col">Self-service, simplicity</div>
+          <div class="feature-col">Easy setup, SQL interface</div>
+          <div class="feature-col">Low-Medium</div>
+        </div>
+      </div>
+      
+      <div class="recommendation">
+        <h4>Quick Recommendation:</h4>
+        <ul>
+          <li><strong>Choose Tableau</strong> for advanced visual analytics and enterprise needs</li>
+          <li><strong>Choose Power BI</strong> for Microsoft ecosystem integration</li>
+          <li><strong>Choose Looker</strong> for embedded analytics and data modeling</li>
+          <li><strong>Choose Metabase</strong> for cost-effective self-service analytics</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Storage Formats Comparison -->
+    <div class="comparison-section">
+      <h3>🏞️ Lakehouse Formats</h3>
+      <div class="comparison-table">
+        <div class="table-header">
+          <div class="tool-col">Format</div>
+          <div class="feature-col">Best For</div>
+          <div class="feature-col">Key Feature</div>
+          <div class="feature-col">Ecosystem</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Delta Lake</strong>
+            <span class="badge databricks">Databricks</span>
+          </div>
+          <div class="feature-col">ACID transactions, reliability</div>
+          <div class="feature-col">Time travel, optimized writes</div>
+          <div class="feature-col">Databricks, Spark</div>
+        </div>
+        
+        <div class="table-row">
+          <div class="tool-col">
+            <strong>Iceberg</strong>
+            <span class="badge open">Open</span>
+          </div>
+          <div class="feature-col">Schema evolution, multi-engine</div>
+          <div class="feature-col">Engine-agnostic, partitioning</div>
+          <div class="feature-col">Spark, Flink, Trino</div>
+        </div>
+      </div>
+      
+      <div class="recommendation">
+        <h4>Quick Recommendation:</h4>
+        <ul>
+          <li><strong>Choose Delta Lake</strong> for Databricks ecosystem and ACID guarantees</li>
+          <li><strong>Choose Iceberg</strong> for multi-engine support and schema evolution</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Decision Guide -->
+  <section class="decision-guide">
+    <h2>🎯 Quick Decision Guide</h2>
+    
+    <div class="decision-grid">
+      <div class="decision-card">
+        <h3>Startups/Small Teams</h3>
+        <ul>
+          <li><strong>Orchestration:</strong> Prefect or Airflow</li>
+          <li><strong>Storage:</strong> BigQuery or Redshift</li>
+          <li><strong>BI:</strong> Metabase or Power BI</li>
+          <li><strong>Streaming:</strong> Kinesis (if AWS)</li>
+        </ul>
+      </div>
+      
+      <div class="decision-card">
+        <h3>Enterprise Teams</h3>
+        <ul>
+          <li><strong>Orchestration:</strong> Airflow or Dagster</li>
+          <li><strong>Storage:</strong> Snowflake</li>
+          <li><strong>BI:</strong> Tableau or Looker</li>
+          <li><strong>Streaming:</strong> Kafka or Pulsar</li>
+        </ul>
+      </div>
+      
+      <div class="decision-card">
+        <h3>Cost-Conscious</h3>
+        <ul>
+          <li><strong>Orchestration:</strong> Open-source Airflow</li>
+          <li><strong>Storage:</strong> BigQuery (pay-per-query)</li>
+          <li><strong>BI:</strong> Metabase (open-source)</li>
+          <li><strong>Streaming:</strong> Managed Kinesis</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -302,23 +613,46 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Simple filtering functionality (updated for cloud-based structure)
+// Enhanced filtering functionality with cloud provider support
 document.getElementById('layer-filter').addEventListener('change', filterTools);
 document.getElementById('type-filter').addEventListener('change', filterTools);
+document.getElementById('cloud-filter').addEventListener('change', filterTools);
 
 function filterTools() {
   const layerFilter = document.getElementById('layer-filter').value;
   const typeFilter = document.getElementById('type-filter').value;
+  const cloudFilter = document.getElementById('cloud-filter').value;
   const toolCards = document.querySelectorAll('.tool-card');
   
   toolCards.forEach(card => {
     const layer = card.querySelector('.layer-badge').textContent;
     const type = card.querySelector('.type-badge').textContent;
     
+    // Get cloud provider from parent section
+    const cloudSection = card.closest('.cloud-section');
+    const cloudSectionId = cloudSection ? cloudSection.id : '';
+    let cloudProvider = '';
+    if (cloudSectionId.includes('aws-tools')) cloudProvider = 'aws';
+    else if (cloudSectionId.includes('gcp-tools')) cloudProvider = 'gcp';
+    else if (cloudSectionId.includes('azure-tools')) cloudProvider = 'azure';
+    else if (cloudSectionId.includes('multi-cloud-tools')) cloudProvider = 'multi-cloud';
+    else if (cloudSectionId.includes('open-source-tools')) cloudProvider = 'open-source';
+    
     const layerMatch = layerFilter === 'all' || layer.includes(layerFilter);
     const typeMatch = typeFilter === 'all' || type.includes(typeFilter);
+    const cloudMatch = cloudFilter === 'all' || cloudProvider === cloudFilter;
     
-    if (layerMatch && typeMatch) {
+    // Show/hide cloud sections based on cloud filter
+    if (cloudFilter === 'all') {
+      cloudSection.style.display = 'block';
+    } else if (cloudSectionId.includes(cloudFilter + '-tools')) {
+      cloudSection.style.display = 'block';
+    } else {
+      cloudSection.style.display = 'none';
+    }
+    
+    // Filter individual tool cards within visible sections
+    if (cloudMatch && layerMatch && typeMatch) {
       card.style.display = 'block';
     } else {
       card.style.display = 'none';

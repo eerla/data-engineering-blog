@@ -108,10 +108,7 @@ title: "Home"
     <h3>Explore</h3>
     <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 900px; margin: 0 auto;">
       <a href="{{ site.baseurl }}/tools/" style="background: #007bff; color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
-        🛠️ Tools Catalog
-      </a>
-      <a href="{{ site.baseurl }}/cloud-tools/" style="background: #007bff; color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
-        ☁️ Cloud Tools
+        🛠️ Comprehensive Tools
       </a>
       <a href="{{ site.baseurl }}/roadmap/" style="background: #007bff; color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         🗺️ Learning Roadmap
@@ -119,8 +116,11 @@ title: "Home"
       <a href="{{ site.baseurl }}/layers/" style="background: #007bff; color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         🏢 Data Layers
       </a>
-      <a href="{{ site.baseurl }}/comparisons/" style="background: #007bff; color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
-        ⚖️ Tool Comparisons
+      <a href="{{ site.baseurl }}/database-guide/" style="background: #007bff; color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
+        🗄️ Database Guide
+      </a>
+      <a href="{{ site.baseurl }}/skills/" style="background: #007bff; color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
+        📋 Skills Guide
       </a>
       <a href="{{ site.baseurl }}/blog/" style="background: #007bff; color: white; padding: 1rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: block; text-align: center;">
         📝 Blog Posts
