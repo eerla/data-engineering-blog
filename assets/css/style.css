@@ -1974,6 +1974,11 @@ pre code {
   color: white;
 }
 
+.db-type.priority-3 {
+  background: #6c757d;
+  color: white;
+}
+
 .db-content {
   padding: 1.5rem;
 }
@@ -2298,6 +2303,292 @@ pre code {
   margin-bottom: 2rem;
   font-size: 1.1rem;
   text-align: center;
+}
+
+/* Skills Guide Styles */
+.skills-section {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+/* Skills Assessment Tool */
+.assessment-tool {
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 1rem;
+}
+
+.assessment-section {
+  margin-bottom: 2rem;
+}
+
+.assessment-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.assessment-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.assessment-option {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.assessment-option:hover {
+  border-color: var(--primary-color);
+  background: var(--background-light);
+}
+
+.assessment-option input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+.assessment-option input[type="radio"]:checked + span {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Skills Results */
+.skills-results {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: var(--background-light);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  animation: slideIn 0.3s ease;
+}
+
+.skills-results h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.priority-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.priority-item {
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.priority-item h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.priority-item p {
+  color: var(--text-light);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-card {
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.skill-header h3 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.skill-level {
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.skill-level.essential {
+  background: #28a745;
+  color: white;
+}
+
+.skill-level.important {
+  background: #ffc107;
+  color: #212529;
+}
+
+.skill-level.advanced {
+  background: #6c757d;
+  color: white;
+}
+
+.skill-card p {
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.skill-resources {
+  text-align: right;
+}
+
+.skill-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skill-link:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Soft Skills Grid */
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.soft-skill-card {
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.soft-skill-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.soft-skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.soft-skill-header h3 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.soft-skill-card p {
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Learning Path */
+.learning-path {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.path-stage {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  background: var(--background-light);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.stage-number {
+  background: var(--primary-color);
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.stage-content h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.stage-content ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  color: var(--text-light);
+}
+
+.stage-content li {
+  margin-bottom: 0.5rem;
+}
+
+/* Skills Responsive Design */
+@media (max-width: 768px) {
+  .skills-grid,
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .assessment-options {
+    flex-direction: column;
+  }
+  
+  .path-stage {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stage-number {
+    margin: 0 auto 1rem;
+  }
 }
 
 /* Grid Layouts */
