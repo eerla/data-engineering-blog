@@ -623,7 +623,218 @@ pre code {
   padding-bottom: 1rem;
 }
 
-/* Cloud Tools Comparison Styles */
+/* Enhanced Tool Comparisons Section Styles */
+.comparisons-section {
+  margin-bottom: 4rem;
+}
+
+.comparisons-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 1rem;
+}
+
+.comparisons-section .comparison-section {
+  margin-bottom: 3rem;
+  background: var(--background-light);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.comparisons-section .comparison-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.comparisons-section .comparison-table {
+  background: var(--background);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.comparisons-section .table-header {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr;
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.comparisons-section .table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.comparisons-section .table-row:hover {
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.comparisons-section .tool-col {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.comparisons-section .feature-col {
+  line-height: 1.4;
+}
+
+.comparisons-section .badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: var(--secondary-color);
+  color: white;
+}
+
+.comparisons-section .badge.mature {
+  background: #28a745;
+}
+
+.comparisons-section .badge.modern {
+  background: #007bff;
+}
+
+.comparisons-section .badge.data-aware {
+  background: #6f42c1;
+}
+
+.comparisons-section .badge.multi-cloud {
+  background: #17a2b8;
+}
+
+.comparisons-section .badge.serverless {
+  background: #fd7e14;
+}
+
+.comparisons-section .badge.aws {
+  background: #ff9900;
+}
+
+.comparisons-section .badge.standard {
+  background: #6c757d;
+}
+
+.comparisons-section .badge.flexible {
+  background: #20c997;
+}
+
+.comparisons-section .badge.enterprise {
+  background: #6f42c1;
+}
+
+.comparisons-section .badge.microsoft {
+  background: #0078d4;
+}
+
+.comparisons-section .badge.embedded {
+  background: #e83e8c;
+}
+
+.comparisons-section .badge.open-source {
+  background: #28a745;
+}
+
+.comparisons-section .badge.databricks {
+  background: #ff3621;
+}
+
+.comparisons-section .badge.open {
+  background: #17a2b8;
+}
+
+.comparisons-section .recommendation {
+  background: var(--background-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+  border-left: 4px solid var(--primary-color);
+}
+
+.comparisons-section .recommendation h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.comparisons-section .recommendation ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.comparisons-section .recommendation li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design for Comparisons */
+@media (max-width: 768px) {
+  .comparisons-section .table-header,
+  .comparisons-section .table-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .comparisons-section .table-header {
+    display: none;
+  }
+  
+  .comparisons-section .table-row {
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .comparisons-section .tool-col,
+  .comparisons-section .feature-col {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .comparisons-section .tool-col::before {
+    content: "Tool: ";
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .comparisons-section .feature-col:nth-child(2)::before {
+    content: "Best For: ";
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .comparisons-section .feature-col:nth-child(3)::before {
+    content: "Key Feature: ";
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .comparisons-section .feature-col:nth-child(4)::before {
+    content: "Learning Curve: ";
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+}
+/* Original Cloud Tools Comparison Styles */
 .comparison-section {
   margin-bottom: 4rem;
 }
