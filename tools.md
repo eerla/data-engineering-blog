@@ -435,6 +435,299 @@ title: "Data Engineering Tools"
     </div>
   </section>
 
+  <!-- Cloud-to-Cloud Cheat Sheet -->
+  <section class="cloud-cheatsheet-section">
+    <h2>☁️ Cloud-to-Cloud Data Engineering Cheat Sheet</h2>
+    <p class="section-intro">Quick reference for equivalent services across AWS, GCP, and Azure. Perfect for multi-cloud migrations and architecture planning.</p>
+    
+    <!-- Distributed Compute -->
+    <div class="cheatsheet-category">
+      <h3>🔥 1. Distributed Compute (Spark / Hadoop)</h3>
+      <div class="cheatsheet-table">
+        <div class="cheatsheet-header">
+          <div>Use Case</div>
+          <div>GCP</div>
+          <div>AWS</div>
+          <div>Azure</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Managed Spark/Hadoop clusters</div>
+          <div>Dataproc</div>
+          <div>EMR</div>
+          <div>Azure Databricks</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Serverless Spark</div>
+          <div>Dataproc Serverless</div>
+          <div>EMR Serverless</div>
+          <div>Synapse Serverless Spark</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Notebook development</div>
+          <div>Vertex AI Workbench / Dataproc Hub</div>
+          <div>EMR Notebooks / SageMaker</div>
+          <div>Databricks Notebooks</div>
+        </div>
+      </div>
+      <div class="cheatsheet-when">
+        <strong>When to use:</strong> scalable ETL, ML feature engineering, batch pipelines, heavy Spark jobs.
+      </div>
+    </div>
+
+    <!-- Batch ETL / ELT -->
+    <div class="cheatsheet-category">
+      <h3>⚙️ 2. Batch ETL / ELT</h3>
+      <div class="cheatsheet-table">
+        <div class="cheatsheet-header">
+          <div>Use Case</div>
+          <div>GCP</div>
+          <div>AWS</div>
+          <div>Azure</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Serverless ETL</div>
+          <div>Dataflow (Batch)</div>
+          <div>AWS Glue ETL</div>
+          <div>ADF Mapping Data Flows</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Pipeline orchestration</div>
+          <div>Cloud Composer (Airflow)</div>
+          <div>Step Functions / MWAA</div>
+          <div>Azure Data Factory Pipelines</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>SQL ELT</div>
+          <div>BigQuery SQL</div>
+          <div>Redshift SQL</div>
+          <div>Synapse SQL</div>
+        </div>
+      </div>
+      <div class="cheatsheet-when">
+        <strong>When to use:</strong> scheduled transformations, ELT workflows, Airflow-based orchestration.
+      </div>
+    </div>
+
+    <!-- Real-Time Streaming -->
+    <div class="cheatsheet-category">
+      <h3>⚡ 3. Real-Time Streaming</h3>
+      <div class="cheatsheet-table">
+        <div class="cheatsheet-header">
+          <div>Use Case</div>
+          <div>GCP</div>
+          <div>AWS</div>
+          <div>Azure</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Stream ingestion</div>
+          <div>Pub/Sub</div>
+          <div>Kinesis Data Streams</div>
+          <div>Event Hubs</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Stream processing</div>
+          <div>Dataflow (Streaming)</div>
+          <div>Kinesis Data Analytics (Flink)</div>
+          <div>Azure Stream Analytics</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>CDC ingestion</div>
+          <div>Datastream</div>
+          <div>DMS + MSK Connect</div>
+          <div>ADF CDC / Event Grid</div>
+        </div>
+      </div>
+      <div class="cheatsheet-when">
+        <strong>When to use:</strong> event-driven pipelines, real-time analytics, CDC replication.
+      </div>
+    </div>
+
+    <!-- Storage -->
+    <div class="cheatsheet-category">
+      <h3>🗄️ 4. Storage (Lake, Warehouse, Lakehouse)</h3>
+      <div class="cheatsheet-table">
+        <div class="cheatsheet-header">
+          <div>Use Case</div>
+          <div>GCP</div>
+          <div>AWS</div>
+          <div>Azure</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Object storage (data lake)</div>
+          <div>Cloud Storage</div>
+          <div>S3</div>
+          <div>ADLS Gen2</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Data warehouse</div>
+          <div>BigQuery</div>
+          <div>Redshift</div>
+          <div>Synapse Dedicated SQL Pool</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Lakehouse</div>
+          <div>BigQuery + Dataplex</div>
+          <div>S3 + Athena + Glue Catalog</div>
+          <div>Synapse + OneLake + Fabric</div>
+        </div>
+      </div>
+      <div class="cheatsheet-when">
+        <strong>When to use:</strong> central data lake, analytics warehouse, unified lakehouse architecture.
+      </div>
+    </div>
+
+    <!-- Metadata, Governance, Catalog -->
+    <div class="cheatsheet-category">
+      <h3>🧭 5. Metadata, Governance, Catalog</h3>
+      <div class="cheatsheet-table">
+        <div class="cheatsheet-header">
+          <div>Use Case</div>
+          <div>GCP</div>
+          <div>AWS</div>
+          <div>Azure</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Data catalog</div>
+          <div>Data Catalog</div>
+          <div>Glue Data Catalog</div>
+          <div>Purview Data Catalog</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Governance & lineage</div>
+          <div>Dataplex</div>
+          <div>Lake Formation</div>
+          <div>Microsoft Purview</div>
+        </div>
+      </div>
+      <div class="cheatsheet-when">
+        <strong>When to use:</strong> schema management, lineage, access control, governance.
+      </div>
+    </div>
+
+    <!-- Data Quality & Observability -->
+    <div class="cheatsheet-category">
+      <h3>🧪 6. Data Quality & Observability</h3>
+      <div class="cheatsheet-table">
+        <div class="cheatsheet-header">
+          <div>Use Case</div>
+          <div>GCP</div>
+          <div>AWS</div>
+          <div>Azure</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Data quality rules</div>
+          <div>Dataplex DQ</div>
+          <div>Glue Data Quality</div>
+          <div>Purview Data Quality</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Pipeline monitoring</div>
+          <div>Cloud Monitoring</div>
+          <div>CloudWatch</div>
+          <div>Azure Monitor</div>
+        </div>
+      </div>
+      <div class="cheatsheet-when">
+        <strong>When to use:</strong> validating datasets, monitoring pipelines, enforcing SLAs.
+      </div>
+    </div>
+
+    <!-- BI & Analytics -->
+    <div class="cheatsheet-category">
+      <h3>📊 7. BI & Analytics</h3>
+      <div class="cheatsheet-table">
+        <div class="cheatsheet-header">
+          <div>Use Case</div>
+          <div>GCP</div>
+          <div>AWS</div>
+          <div>Azure</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>BI dashboards</div>
+          <div>Looker / Looker Studio</div>
+          <div>QuickSight</div>
+          <div>Power BI</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>SQL on data lake</div>
+          <div>BigQuery Omni / BigLake</div>
+          <div>Athena</div>
+          <div>Synapse Serverless SQL</div>
+        </div>
+      </div>
+      <div class="cheatsheet-when">
+        <strong>When to use:</strong> dashboards, ad-hoc analytics, federated SQL.
+      </div>
+    </div>
+
+    <!-- ML / Feature Engineering -->
+    <div class="cheatsheet-category">
+      <h3>🤖 8. ML / Feature Engineering (Adjacent to DE)</h3>
+      <div class="cheatsheet-table">
+        <div class="cheatsheet-header">
+          <div>Use Case</div>
+          <div>GCP</div>
+          <div>AWS</div>
+          <div>Azure</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>ML platform</div>
+          <div>Vertex AI</div>
+          <div>SageMaker</div>
+          <div>Azure ML</div>
+        </div>
+        <div class="cheatsheet-row">
+          <div>Feature store</div>
+          <div>Vertex AI Feature Store</div>
+          <div>SageMaker Feature Store</div>
+          <div>Azure Feature Store (Fabric)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Quick Summary -->
+    <div class="quick-summary">
+      <h3>🧩 One-Page Summary</h3>
+      <div class="summary-grid">
+        <div class="summary-card">
+          <h4>If you want Spark →</h4>
+          <div class="cloud-options">
+            <strong>GCP:</strong> Dataproc<br>
+            <strong>AWS:</strong> EMR<br>
+            <strong>Azure:</strong> Databricks
+          </div>
+        </div>
+        
+        <div class="summary-card">
+          <h4>If you want Serverless ETL →</h4>
+          <div class="cloud-options">
+            <strong>GCP:</strong> Dataflow<br>
+            <strong>AWS:</strong> Glue<br>
+            <strong>Azure:</strong> ADF Data Flows
+          </div>
+        </div>
+        
+        <div class="summary-card">
+          <h4>If you want Streaming →</h4>
+          <div class="cloud-options">
+            <strong>GCP:</strong> Pub/Sub + Dataflow<br>
+            <strong>AWS:</strong> Kinesis + KDA<br>
+            <strong>Azure:</strong> Event Hubs + Stream Analytics
+          </div>
+        </div>
+        
+        <div class="summary-card">
+          <h4>If you want a Lakehouse →</h4>
+          <div class="cloud-options">
+            <strong>GCP:</strong> BigQuery + Dataplex<br>
+            <strong>AWS:</strong> S3 + Athena + Glue Catalog<br>
+            <strong>Azure:</strong> Synapse + OneLake + Fabric
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Quick Decision Guide -->
   <section class="decision-guide">
     <h2>🎯 Quick Decision Guide</h2>
