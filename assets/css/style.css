@@ -538,6 +538,206 @@ pre code {
   margin-top: 2rem;
 }
 
+/* Role-Specific Requirements Styles */
+.role-requirements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.role-card {
+  background: var(--background-light);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.role-card.junior {
+  border-left: 4px solid #10b981;
+}
+
+.role-card.mid {
+  border-left: 4px solid #3b82f6;
+}
+
+.role-card.senior {
+  border-left: 4px solid #8b5cf6;
+}
+
+.role-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.role-header h3 {
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.role-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: white;
+}
+
+.role-badge.junior {
+  background: #10b981;
+}
+
+.role-badge.mid {
+  background: #3b82f6;
+}
+
+.role-badge.senior {
+  background: #8b5cf6;
+}
+
+.role-description {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.skill-requirements {
+  margin-top: 1.5rem;
+}
+
+.requirement-group {
+  margin-bottom: 1.5rem;
+}
+
+.requirement-group h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: var(--background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.2s ease;
+}
+
+.skill-item:hover {
+  background: var(--hover-color);
+}
+
+.skill-name {
+  font-weight: 500;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.skill-level-badge {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: white;
+  margin-left: 1rem;
+}
+
+.skill-level-badge.beginner {
+  background: #10b981;
+}
+
+.skill-level-badge.intermediate {
+  background: #3b82f6;
+}
+
+.skill-level-badge.advanced {
+  background: #8b5cf6;
+}
+
+.skill-level-badge:contains('Intermediate/Advanced') {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+/* Responsive Design for Role Requirements */
+@media (max-width: 768px) {
+  .role-requirements {
+    grid-template-columns: 1fr;
+  }
+  
+  .role-card {
+    padding: 1.5rem;
+  }
+  
+  .role-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .role-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .skill-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .skill-level-badge {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .role-card {
+    padding: 1rem;
+  }
+  
+  .role-header h3 {
+    font-size: 1.1rem;
+  }
+  
+  .requirement-group h4 {
+    font-size: 1rem;
+  }
+  
+  .skill-item {
+    padding: 0.5rem;
+  }
+  
+  .skill-name {
+    font-size: 0.9rem;
+  }
+  
+  .skill-level-badge {
+    font-size: 0.7rem;
+  }
+}
+
 /* Cloud Tools Page Styles */
 .cloud-intro {
   margin-bottom: 4rem;

@@ -37,16 +37,16 @@ title: "Data Engineering Skills Guide"
         <h3>What's your target role?</h3>
         <div class="assessment-options">
           <label class="assessment-option">
-            <input type="radio" name="role" value="generalist" onchange="filterSkills()">
-            <span>General Data Engineer</span>
+            <input type="radio" name="role" value="junior" onchange="filterSkills()">
+            <span>Junior Data Engineer</span>
           </label>
           <label class="assessment-option">
-            <input type="radio" name="role" value="analytics" onchange="filterSkills()">
-            <span>Analytics Engineer</span>
+            <input type="radio" name="role" value="data-engineer" onchange="filterSkills()">
+            <span>Data Engineer</span>
           </label>
           <label class="assessment-option">
-            <input type="radio" name="role" value="platform" onchange="filterSkills()">
-            <span>Platform Engineer</span>
+            <input type="radio" name="role" value="senior" onchange="filterSkills()">
+            <span>Senior Data Engineer</span>
           </label>
         </div>
       </div>
@@ -173,6 +173,217 @@ title: "Data Engineering Skills Guide"
         <p>REST APIs, data extraction from external systems</p>
         <div class="skill-resources">
           <a href="{{ site.baseurl }}/tools/" class="skill-link">Tools Catalog</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Role-Specific Requirements -->
+  <section class="skills-section">
+    <h2 class="section-title"> Role-Specific Skill Requirements</h2>
+    <p class="section-description">What you need for each data engineering role level</p>
+    
+    <div class="role-requirements">
+      <!-- Junior Data Engineer -->
+      <div class="role-card junior">
+        <div class="role-header">
+          <h3>Junior Data Engineer</h3>
+          <span class="role-badge junior">Entry Level</span>
+        </div>
+        <p class="role-description">Despite the junior title, data engineering is typically not an entry-level job and therefore few of these positions exist. If you are starting from scratch, the best advice is to find an adjacent role and transition into data engineering. If you are already in an adjacent role such as: BI developer, SQL developer, or backend engineer then you probably have overlapping experience.</p>
+        
+        <div class="skill-requirements">
+          <div class="requirement-group">
+            <h4>Minimum Skills Required:</h4>
+            <div class="skill-list">
+              <div class="skill-item beginner">
+                <span class="skill-name">SQL</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Data Modeling</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Relational Database</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Soft Skills</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="requirement-group">
+            <h4>Nice to Have:</h4>
+            <div class="skill-list">
+              <div class="skill-item beginner">
+                <span class="skill-name">Scripting Language (Python, Java, or Scala)</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Data Engineer -->
+      <div class="role-card mid">
+        <div class="role-header">
+          <h3>Data Engineer</h3>
+          <span class="role-badge mid">Mid Level</span>
+        </div>
+        
+        <div class="skill-requirements">
+          <div class="requirement-group">
+            <h4>Minimum Skills Required:</h4>
+            <div class="skill-list">
+              <div class="skill-item intermediate">
+                <span class="skill-name">SQL</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Data Modeling</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Scripting Language (Python, Java, or Scala)</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Indexing & Query Optimization</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Batch Data Processing</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Soft Skills</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Relational Database</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Online Transaction Processing</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Data Pipeline</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Data Warehouse</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="requirement-group">
+            <h4>Nice to Have:</h4>
+            <div class="skill-list">
+              <div class="skill-item intermediate">
+                <span class="skill-name">Cloud Platform (AWS, Azure, or GCP)</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Stream Data Processing</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Online Analytical Processing</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Reporting Tools (Tableau, Superset, Metabase)</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Senior Data Engineer -->
+      <div class="role-card senior">
+        <div class="role-header">
+          <h3>Senior Data Engineer</h3>
+          <span class="role-badge senior">Senior Level</span>
+        </div>
+        
+        <div class="skill-requirements">
+          <div class="requirement-group">
+            <h4>Minimum Skills Required:</h4>
+            <div class="skill-list">
+              <div class="skill-item advanced">
+                <span class="skill-name">Soft Skills</span>
+                <span class="skill-level-badge advanced">Intermediate/Advanced</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">SQL</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">Data Modeling</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">Scripting Language (Python, Java, or Scala)</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">Indexing & Query Optimization</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">Cloud Platform (AWS, Azure, or GCP)</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item beginner">
+                <span class="skill-name">Infrastructure as Code</span>
+                <span class="skill-level-badge beginner">Beginner</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">Batch Data Processing</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">Relational Database</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">Non-relational Database</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Online Transaction Processing</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Online Analytical Processing</span>
+                <span class="skill-level-badge intermediate">Intermediate</span>
+              </div>
+              <div class="skill-item advanced">
+                <span class="skill-name">Data Pipeline</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="requirement-group">
+            <h4>Nice to Have:</h4>
+            <div class="skill-list">
+              <div class="skill-item advanced">
+                <span class="skill-name">Infrastructure as Code</span>
+                <span class="skill-level-badge advanced">Advanced</span>
+              </div>
+              <div class="skill-item intermediate">
+                <span class="skill-name">Reporting Tools (Tableau, Superset, Metabase)</span>
+                <span class="skill-level-badge intermediate">Beginner/Intermediate</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
